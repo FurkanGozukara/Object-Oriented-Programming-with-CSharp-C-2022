@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>lecture_1_another_assembly</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="lecture 1">
+      <HintPath>..\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

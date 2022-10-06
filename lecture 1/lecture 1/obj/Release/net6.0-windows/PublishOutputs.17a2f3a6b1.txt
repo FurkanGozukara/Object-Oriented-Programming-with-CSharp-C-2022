@@ -1,0 +1,5 @@
+C:\Users\Furkan Gözükara\Desktop\2022 oop\lecture 1\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.exe
+C:\Users\Furkan Gözükara\Desktop\2022 oop\lecture 1\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.dll
+C:\Users\Furkan Gözükara\Desktop\2022 oop\lecture 1\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.deps.json
+C:\Users\Furkan Gözükara\Desktop\2022 oop\lecture 1\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\2022 oop\lecture 1\lecture 1\bin\Release\net6.0-windows\publish\lecture 1.pdb

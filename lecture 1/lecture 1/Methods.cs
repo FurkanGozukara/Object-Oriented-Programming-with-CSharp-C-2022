@@ -8,6 +8,8 @@ namespace lecture_1
 {
     public class Methods
     {
+        public int irMyNumber;
+
         public static int func1()
         {
             return 1;
