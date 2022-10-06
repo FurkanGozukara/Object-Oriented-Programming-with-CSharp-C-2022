@@ -61,6 +61,16 @@ namespace lecture_1
             irNumber = irNumber * 3;
         }
 
+        public static void modifyValueType2(ref int irNumber)
+        {
+            irNumber = irNumber * 3;
+        }
+
+        public static void modifyValueType3(MainWindow _main)
+        {
+            _main.irNumbergg = _main.irNumbergg * 3;
+        }
+
     }
 
     public class DerivedMethods : Methods

@@ -20,18 +20,20 @@ namespace lecture_1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string srMsg="test";
+        public string srMsg = "test";
 
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
 
         //public can be accessed everywhere
         //private can be accessed only within class
         //protected can be accessed from derived class
         //internal can be accessed only within same assembly
+
+        public int irNumbergg = 10;
 
         private void btnReturnResult_Click(object sender, RoutedEventArgs e)
         {
@@ -53,10 +55,17 @@ namespace lecture_1
 
             Methods.doSpecialThing(this);
 
-            int irNumbergg = 10;
+
             MessageBox.Show("number gg = " + irNumbergg);
             Methods.modifyValueType(irNumbergg);
             MessageBox.Show("number gg = " + irNumbergg);
+
+            Methods.modifyValueType2(ref irNumbergg);
+            MessageBox.Show("number gg = " + irNumbergg);
+
+            Methods.modifyValueType3(this);
+            MessageBox.Show("number gg = " + irNumbergg);
+
 
         }
 
@@ -64,7 +73,7 @@ namespace lecture_1
         {
             public int func4()
             {
-               //not this but base to call paren'ts func4
+                //not this but base to call paren'ts func4
                 return base.func4();
             }
 
@@ -72,6 +81,53 @@ namespace lecture_1
             {
                 return this.irMyNumber;
             }
+        }
+
+        public class csStudent
+        {
+            public int irAge;
+            public string srName;
+        }
+
+        public struct stStudent
+        {
+            public int irAge;
+            public string srName;
+        }
+
+        private void btnstructvsreference_Click(object sender, RoutedEventArgs e)
+        {
+            csStudent student1 = new csStudent();
+            student1.irAge = 10;
+            student1.srName = "Furkan";
+
+            csStudent student2 = student1;
+
+            MessageBox.Show($"student 1 is {student1.srName} : {student1.irAge} ");
+
+            MessageBox.Show($"student 2 is {student2.srName} : {student2.irAge} ");
+
+            student2.irAge = 32;
+            student2.srName = "Ali";
+
+            MessageBox.Show($"student 1 is {student1.srName} : {student1.irAge} ");
+
+            MessageBox.Show($"student 2 is {student2.srName} : {student2.irAge} ");
+
+            stStudent _student1 = new stStudent { irAge = 20, srName = "Zeynep" };
+
+            stStudent _student2 = _student1;
+
+            MessageBox.Show($"_student1 1 is {_student1.srName} : {_student1.irAge} ");
+
+            MessageBox.Show($"_student2 2 is {_student2.srName} : {_student2.irAge} ");
+
+            _student2.irAge = 25;
+            _student2.srName = "Meryem";
+
+            MessageBox.Show($"_student1 1 is {_student1.srName} : {_student1.irAge} ");
+
+            MessageBox.Show($"_student2 2 is {_student2.srName} : {_student2.irAge} ");
         }
     }
 }
