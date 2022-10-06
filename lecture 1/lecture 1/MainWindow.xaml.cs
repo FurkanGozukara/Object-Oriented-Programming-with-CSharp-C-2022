@@ -136,6 +136,10 @@ namespace lecture_1
             MessageBox.Show($"student 1 is {student1.srName} : {student1.irAge} ");
 
             MessageBox.Show($"student 2 is {student2.srName} : {student2.irAge} ");
+
+           // student1 = student2; <this 2 makes different> student2 = student1;
         }
+
+        //show ref type to class type object what happens
     }
 }
