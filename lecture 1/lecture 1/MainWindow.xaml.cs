@@ -101,7 +101,7 @@ namespace lecture_1
             student1.irAge = 10;
             student1.srName = "Furkan";
 
-            csStudent student2 = student1;
+            csStudent student2 = student1; // this just generates a new address that points to the same values of student 1 in memory
 
             MessageBox.Show($"student 1 is {student1.srName} : {student1.irAge} ");
 
@@ -116,7 +116,7 @@ namespace lecture_1
 
             stStudent _student1 = new stStudent { irAge = 20, srName = "Zeynep" };
 
-            stStudent _student2 = _student1;
+            stStudent _student2 = _student1;//this copies values of studet 1 into a new address and value in memory - we have 2 values and 2 address 
 
             MessageBox.Show($"_student1 1 is {_student1.srName} : {_student1.irAge} ");
 
@@ -128,6 +128,14 @@ namespace lecture_1
             MessageBox.Show($"_student1 1 is {_student1.srName} : {_student1.irAge} ");
 
             MessageBox.Show($"_student2 2 is {_student2.srName} : {_student2.irAge} ");
+
+            student2 = new csStudent();
+            student2.srName = "New Student";
+            student2.irAge = 36;
+
+            MessageBox.Show($"student 1 is {student1.srName} : {student1.irAge} ");
+
+            MessageBox.Show($"student 2 is {student2.srName} : {student2.irAge} ");
         }
     }
 }

@@ -9,6 +9,7 @@
     <Grid>
         <Button Name="btnReturnResult"  Content="return result" HorizontalAlignment="Left" Margin="42,50,0,0" VerticalAlignment="Top" Height="48" Width="87" Click="btnReturnResult_Click"/>
         <Label Name="lblmsg" Content="Label" HorizontalAlignment="Left" Margin="213,19,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnstructvsreference" Content="struct vs reference type" HorizontalAlignment="Left" Margin="166,45,0,0" VerticalAlignment="Top" Height="58" Width="132" Click="btnstructvsreference_Click"/>
 
     </Grid>
 </Window>
