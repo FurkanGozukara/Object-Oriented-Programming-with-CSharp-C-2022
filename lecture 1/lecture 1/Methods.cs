@@ -44,14 +44,36 @@ namespace lecture_1
         {
             return 7;
         }
+
+        public static string printMSG()
+        {
+            return "working";
+        }
+
+        public static void doSpecialThing(MainWindow _main)
+        {
+            _main.srMsg = "ok it works";
+            _main.lblmsg.Content = "working";
+        }
+
+        public static void modifyValueType(int irNumber)
+        {
+            irNumber = irNumber * 3;
+        }
+
     }
 
     public class DerivedMethods : Methods
     {
+       
+
         DerivedMethods()
         {
-             
+            irMyNumber = 32;
+            this.irMyNumber = 32;
+            func1();
         }
     }
 
+ 
 }

@@ -20,9 +20,12 @@ namespace lecture_1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string srMsg="test";
+
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         //public can be accessed everywhere
@@ -47,6 +50,14 @@ namespace lecture_1
 
             newTest test3 = new newTest();
             MessageBox.Show(test3.func8().ToString());
+
+            Methods.doSpecialThing(this);
+
+            int irNumbergg = 10;
+            MessageBox.Show("number gg = " + irNumbergg);
+            Methods.modifyValueType(irNumbergg);
+            MessageBox.Show("number gg = " + irNumbergg);
+
         }
 
         private class newTest : Methods
