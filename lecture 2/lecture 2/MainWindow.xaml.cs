@@ -87,6 +87,7 @@ namespace lecture_2
 
             t1.ContinueWith((p1) =>
             {
+                //if something is returning from that task it would be in p1
                 sw1.Stop(); 
                 MessageBox.Show("method 1 took " + sw1.ElapsedMilliseconds.ToString("N0") + " ms");
             });
