@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,12 +35,12 @@ namespace lecture_2
             {
                 myVehicle.VehicleName = txtProperty.Text;
             }
-            catch   (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                
+
             }
-         
+
             MessageBox.Show(myVehicle.VehicleName);
         }
 
@@ -47,8 +49,8 @@ namespace lecture_2
             try
             {
                 int irNumber = Convert.ToInt32(txtNumber.Text);
-                int irResult = Convert.ToInt32( Math.Pow(irNumber, 2));
-              
+                int irResult = Convert.ToInt32(Math.Pow(irNumber, 2));
+
                 if (irResult > 1000)
                     irResult = 1000;
 
@@ -56,9 +58,9 @@ namespace lecture_2
 
                 MessageBox.Show(irResult.ToString("N0"));//n0 means no numbers after 0.x if it be n1 it will show as 0.2 // so this is for precision
 
-                MessageBox.Show(3213.673.ToString("N1",new CultureInfo("en-US")));//displays 3,213.7
+                MessageBox.Show(3213.673.ToString("N1", new CultureInfo("en-US")));//displays 3,213.7
 
-                MessageBox.Show(3213.673.ToString("N1", new CultureInfo("tr-TR")));//displays 3.213,7
+                MessageBox.Show(3213.673F.ToString("N1", new CultureInfo("tr-TR")));//displays 3.213,7
             }
             catch (OverflowException E)
             {
@@ -74,6 +76,54 @@ namespace lecture_2
             }
 
 
+        }
+
+        private void btnGenerateRandomNumbers_Click(object sender, RoutedEventArgs e)
+        {
+            Stopwatch sw = new Stopwatch();
+
+            sw.Start();
+            WriteNumbersToText_v1();
+            sw.Stop();
+            MessageBox.Show("method 1 took " + sw.ElapsedMilliseconds.ToString("N0") + " ms");
+
+            sw.Reset();
+            sw.Start();
+            WriteNumbersToText_v2();
+            sw.Stop();
+            MessageBox.Show("method 2 took " + sw.ElapsedMilliseconds.ToString("N0") + " ms");
+        }
+
+        static int irNumberstoBeWritten = 1000000;
+
+        private static void WriteNumbersToText_v1()
+        {
+            Random newRand = new Random();
+            using (StreamWriter swWrite = new StreamWriter("random_numbers_v1.txt"))
+            {
+                //https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.autoflush?view=net-6.0
+                swWrite.AutoFlush = true;//auto flush means it will save string in memory to file as batches continously 
+                for (int i = 0; i < irNumberstoBeWritten; i++)
+                {
+                    swWrite.WriteLine(newRand.Next());
+                }
+            }//when it goes out of this scope, everything inside using is properly disposed off
+        }
+
+        private static void WriteNumbersToText_v2()
+        {
+            Random newRand = new Random();
+
+            List<string> lstNumbers = new List<string>();
+
+            for (int i = 0; i < irNumberstoBeWritten; i++)
+            {
+                lstNumbers.Add(newRand.Next().ToString());
+            }
+
+            File.WriteAllLines("random_numbers_v2.txt", lstNumbers);
+
+            // File.WriteAllLines("random_numbers_v2.txt", lstNumbers.Select(pr => pr.ToString()));
         }
     }
 }

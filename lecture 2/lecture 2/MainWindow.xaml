@@ -11,6 +11,7 @@
         <TextBox Name="txtProperty" HorizontalAlignment="Left" Margin="93,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txtNumber" HorizontalAlignment="Left" Margin="297,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="139"/>
         <Button Name="btnPrintNumber" Content="show x^2 of number" HorizontalAlignment="Left" Margin="297,39,0,0" VerticalAlignment="Top" Height="73" Width="139" Click="btnPrintNumber_Click"/>
+        <Button Content="generate random numbers" Name="btnGenerateRandomNumbers" HorizontalAlignment="Left" Margin="297,164,0,0" VerticalAlignment="Top" Height="73" Width="184" Click="btnGenerateRandomNumbers_Click"/>
 
     </Grid>
 </Window>
