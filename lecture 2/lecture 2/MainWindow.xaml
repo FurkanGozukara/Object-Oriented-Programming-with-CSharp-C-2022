@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Name="btnPrintProperty" Content="printy property" HorizontalAlignment="Left" Margin="93,39,0,0" VerticalAlignment="Top" Height="73" Width="116" Click="btnPrintProperty_Click" />
+        <Button Name="btnPrintProperty" Content="printy property" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Height="73" Width="116" Click="btnPrintProperty_Click" />
         <TextBox Name="txtProperty" HorizontalAlignment="Left" Margin="93,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txtNumber" HorizontalAlignment="Left" Margin="297,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="139"/>
         <Button Name="btnPrintNumber" Content="show x^2 of number" HorizontalAlignment="Left" Margin="297,39,0,0" VerticalAlignment="Top" Height="73" Width="139" Click="btnPrintNumber_Click"/>

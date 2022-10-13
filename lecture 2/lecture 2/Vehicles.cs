@@ -23,6 +23,12 @@ namespace lecture_2
 
             set
             {
+                if(value.Length>100)
+                {
+                    _VehicleName = "null";
+                    throw new Exception("You have entered too big name bigger than 100 character");
+                }
+
                 if (string.IsNullOrEmpty(value))
                     _VehicleName = "Not Set";
                 else

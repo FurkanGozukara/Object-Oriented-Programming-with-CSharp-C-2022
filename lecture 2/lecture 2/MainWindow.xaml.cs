@@ -28,13 +28,47 @@ namespace lecture_2
         private void btnPrintProperty_Click(object sender, RoutedEventArgs e)
         {
             Vehicles myVehicle = new Vehicles();
-            myVehicle.VehicleName = txtProperty.Text;
+            try
+            {
+                myVehicle.VehicleName = txtProperty.Text;
+            }
+            catch   (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+         
             MessageBox.Show(myVehicle.VehicleName);
         }
 
         private void btnPrintNumber_Click(object sender, RoutedEventArgs e)
         {
-             
+            try
+            {
+                int irNumber = Convert.ToInt32(txtNumber.Text);
+                int irResult = Convert.ToInt32( Math.Pow(irNumber, 2));
+              
+                if (irResult > 1000)
+                    irResult = 1000;
+
+                irResult = (irResult > 1000 ? 1000 : irResult);
+
+                MessageBox.Show(Math.Pow(irNumber, 2).ToString());
+            }
+            catch (OverflowException E)
+            {
+                MessageBox.Show("The number you have entered overflows int\n\n" + E.StackTrace);
+            }
+            catch (FormatException E)
+            {
+                MessageBox.Show("You have entered invalid number\n\n" + E.StackTrace);
+            }
+            finally//this is called everytime
+            {
+                MessageBox.Show("finally called");
+            }
+
+
         }
     }
 }
