@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +54,11 @@ namespace lecture_2
 
                 irResult = (irResult > 1000 ? 1000 : irResult);
 
-                MessageBox.Show(Math.Pow(irNumber, 2).ToString());
+                MessageBox.Show(irResult.ToString("N0"));//n0 means no numbers after 0.x if it be n1 it will show as 0.2 // so this is for precision
+
+                MessageBox.Show(3213.673.ToString("N1",new CultureInfo("en-US")));//displays 3,213.7
+
+                MessageBox.Show(3213.673.ToString("N1", new CultureInfo("tr-TR")));//displays 3.213,7
             }
             catch (OverflowException E)
             {
