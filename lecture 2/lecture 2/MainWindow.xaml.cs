@@ -80,24 +80,39 @@ namespace lecture_2
 
         private void btnGenerateRandomNumbers_Click(object sender, RoutedEventArgs e)
         {
-            Stopwatch sw = new Stopwatch();
+            Stopwatch sw1 = new Stopwatch();
 
-            sw.Start();
-            WriteNumbersToText_v1();
-            sw.Stop();
-            MessageBox.Show("method 1 took " + sw.ElapsedMilliseconds.ToString("N0") + " ms");
+            sw1.Start();
+            var t1 = Task.Factory.StartNew(() => { WriteNumbersToText_v1(); });
 
-            sw.Reset();
-            sw.Start();
-            WriteNumbersToText_v2();
-            sw.Stop();
-            MessageBox.Show("method 2 took " + sw.ElapsedMilliseconds.ToString("N0") + " ms");
+            t1.ContinueWith((p1) =>
+            {
+                sw1.Stop(); 
+                MessageBox.Show("method 1 took " + sw1.ElapsedMilliseconds.ToString("N0") + " ms");
+            });
+
+            Stopwatch sw2 = new Stopwatch();
+
+            sw2.Start();
+            var t2 = Task.Factory.StartNew(() => { WriteNumbersToText_v2(); });
+
+            t2.ContinueWith((p1) =>
+            {
+                sw2.Stop();
+                MessageBox.Show("method 2 took " + sw2.ElapsedMilliseconds.ToString("N0") + " ms");
+            });
+
+          
+
+        
+         
         }
 
         static int irNumberstoBeWritten = 1000000;
 
         private static void WriteNumbersToText_v1()
         {
+            //do not uses any ram memory but slower
             Random newRand = new Random();
             using (StreamWriter swWrite = new StreamWriter("random_numbers_v1.txt"))
             {
@@ -111,7 +126,7 @@ namespace lecture_2
         }
 
         private static void WriteNumbersToText_v2()
-        {
+        {   // uses big amount of ram but faster
             Random newRand = new Random();
 
             List<string> lstNumbers = new List<string>();
