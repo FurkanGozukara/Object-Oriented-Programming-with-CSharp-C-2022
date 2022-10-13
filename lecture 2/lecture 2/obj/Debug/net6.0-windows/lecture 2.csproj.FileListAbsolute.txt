@@ -1,0 +1,21 @@
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\bin\Debug\net6.0-windows\lecture 2.exe
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\bin\Debug\net6.0-windows\lecture 2.deps.json
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\bin\Debug\net6.0-windows\lecture 2.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\bin\Debug\net6.0-windows\lecture 2.dll
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\bin\Debug\net6.0-windows\lecture 2.pdb
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.g.resources
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.dll
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\refint\lecture 2.dll
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.pdb
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\lecture 2.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\2023 oop\lecture 2\lecture 2\obj\Debug\net6.0-windows\ref\lecture 2.dll
