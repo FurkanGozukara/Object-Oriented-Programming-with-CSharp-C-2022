@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Furkan Gözükara\\Desktop\\2023 oop\\lecture 2\\lecture 2\\lecture 2.csproj",
+      "projectUniqueName": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 2\\lecture 2\\lecture 2.csproj",
       "projectName": "lecture 2",
-      "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\2023 oop\\lecture 2\\lecture 2\\lecture 2.csproj",
+      "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 2\\lecture 2\\lecture 2.csproj",
       "packagesPath": "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Furkan Gözükara\\Desktop\\2023 oop\\lecture 2\\lecture 2\\obj\\",
+      "outputPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 2\\lecture 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

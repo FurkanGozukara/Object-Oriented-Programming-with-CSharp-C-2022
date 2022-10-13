@@ -31,5 +31,10 @@ namespace lecture_2
             myVehicle.VehicleName = txtProperty.Text;
             MessageBox.Show(myVehicle.VehicleName);
         }
+
+        private void btnPrintNumber_Click(object sender, RoutedEventArgs e)
+        {
+             
+        }
     }
 }
