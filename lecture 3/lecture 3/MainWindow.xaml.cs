@@ -100,6 +100,13 @@ namespace lecture_3
 
             writeDictioaryToFile("random_sorted_dic.txt", DictTuples);
 
+            int irTestval = 100;
+            outExample(299, out irTestval);
+        }
+
+        private void outExample(int irNumber1, out int irNumber2)
+        {
+            irNumber2 = irNumber1 * 100;
         }
 
         Tuple<int, int, int> doubleThem(Tuple<int, int, int> vrTuple)
@@ -163,15 +170,13 @@ namespace lecture_3
 
         private void speedTest_Click(object sender, RoutedEventArgs e)
         {
-
-
             Random randTest = new Random();
 
             List<int> listTestKeys = new List<int>();
 
             for (int i = 0; i < 100; i++)
             {
-                listTestKeys.Add(randTest.Next(0, 100));
+                listTestKeys.Add(randTest.Next(0, 100000));
             }
 
             Stopwatch swTimer = new Stopwatch();
@@ -180,6 +185,29 @@ namespace lecture_3
             foreach (var vrKey in listTestKeys)
             {
                 var vrFoundTuple = ListTuples.Where(pr => pr.Item1 == vrKey).FirstOrDefault();
+
+                foreach (var vrEachTuple in ListTuples)
+                {
+                    if(vrEachTuple.Item1==vrKey)
+                    {
+                        vrFoundTuple = vrEachTuple;
+                        break;
+                    }
+                }
+
+                var vrFoundTuples = ListTuples.Where(pr => pr.Item1 == vrKey);
+
+                List<Tuple<int, string>> lstFoundTuples = new List<Tuple<int, string>>();
+
+                foreach (var vrEachTuple in ListTuples)
+                {
+                    if (vrEachTuple.Item1 == vrKey)
+                    {
+                        lstFoundTuples.Add(vrEachTuple);
+                    }
+                }
+
+
                 if (vrFoundTuple != null)
                     lstListFoundItems.Add(vrFoundTuple.Item1 + "\n" + vrFoundTuple.Item2);
             }
