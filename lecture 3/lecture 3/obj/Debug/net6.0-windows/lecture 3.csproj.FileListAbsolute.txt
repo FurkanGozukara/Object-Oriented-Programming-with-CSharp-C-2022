@@ -1,0 +1,21 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\bin\Debug\net6.0-windows\lecture 3.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\bin\Debug\net6.0-windows\lecture 3.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\bin\Debug\net6.0-windows\lecture 3.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\bin\Debug\net6.0-windows\lecture 3.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\bin\Debug\net6.0-windows\lecture 3.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.g.resources
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\refint\lecture 3.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\lecture 3.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\ref\lecture 3.dll

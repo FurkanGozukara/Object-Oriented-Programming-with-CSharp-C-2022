@@ -101,12 +101,7 @@ namespace lecture_2
             {
                 sw2.Stop();
                 MessageBox.Show("method 2 took " + sw2.ElapsedMilliseconds.ToString("N0") + " ms");
-            });
-
-          
-
-        
-         
+            });       
         }
 
         static int irNumberstoBeWritten = 1000000;
