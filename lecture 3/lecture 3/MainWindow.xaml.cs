@@ -75,10 +75,16 @@ namespace lecture_3
 
             //random sort list and dictionary to compare speed
 
-            writeListToTextFile("default_sort_list.txt", ListTuples);
-
+            string srPath = "default_sort_list.txt";
+            int irNewNumber = 55;
+            int irSecondNumber = 100;
+            writeListToTextFile(srPath, ListTuples , irNewNumber, ref irSecondNumber);
+            //string doesnt behave like a class type because it is immutable
             ListTuples = ListTuples.OrderBy(anyThing => Guid.NewGuid()).ToList();
 
+            writeListToTextFile("default_sort_list.txt", ListTuples, irNewNumber, ref irSecondNumber);
+
+            writeListToTextFile_v2("default_sort_list.txt", ref ListTuples, irNewNumber, ref irSecondNumber);
         }
 
         Tuple<int, int, int> doubleThem(Tuple<int, int, int> vrTuple)
@@ -87,14 +93,17 @@ namespace lecture_3
         }
 
         //complete this method
-        private void writeListToTextFile(string FileName, List<Tuple<int, string>> ListTuples)
+        private void writeListToTextFile(string FileName, List<Tuple<int, string>> ListTuples , int irNewNumber, ref int irSecondNumber)
         {
             //if you dont provide a full path it will save file into the same folder as exe - where the exe is running 
             File.WriteAllLines(FileName, ListTuples.Select(perPairs => perPairs.Item1 + "\t" + perPairs.Item2));
             //" t is tab character"
 
-            ListTuples[0] = new Tuple<int, string>(0, "111");//would this affect the list
+            ListTuples[0] = new Tuple<int, string>(0, irNewNumber.ToString("N0"));//would this affect the list
 
+            FileName = "new path";
+            irNewNumber = 1000;
+            irSecondNumber = 500;
             //this is easier but slower method
             //using (StreamWriter swWrite =new StreamWriter(FileName))
             //{
@@ -108,11 +117,20 @@ namespace lecture_3
             //        swWrite.WriteLine(ListTuples[i].Item1 + "\t" + ListTuples[i].Item2);
             //    }
             //}
+
+            ListTuples = new List<Tuple<int, string>>();
         }
 
         private void writeDictioaryToFile(string FileName, Dictionary<int, string> DictTuples)
         {
             File.WriteAllLines(FileName, DictTuples.Select(pr => pr.Key + "\t" + pr.Value));
+        }
+
+        private void writeListToTextFile_v2(string FileName, ref List<Tuple<int, string>> ListTuples, int irNewNumber, ref int irSecondNumber)
+        {
+            File.WriteAllLines(FileName, ListTuples.Select(perPairs => perPairs.Item1 + "\t" + perPairs.Item2));
+
+            ListTuples = new List<Tuple<int, string>>();
         }
     }
 }
