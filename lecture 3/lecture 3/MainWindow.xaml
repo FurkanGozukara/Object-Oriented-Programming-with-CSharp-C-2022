@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Name="speedTest" Content="speed test" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="45" Width="76" Click="speedTest_Click"/>
+        <Button Name="btnnInitTestdata" Content="init test data" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="45" Width="76" Click="btnnInitTestdata_Click"/>
+        <Button Name="speedTest" Content="speed test" HorizontalAlignment="Left" Margin="171,46,0,0" VerticalAlignment="Top" Height="45" Width="96" Click="speedTest_Click"/>
 
     </Grid>
 </Window>
