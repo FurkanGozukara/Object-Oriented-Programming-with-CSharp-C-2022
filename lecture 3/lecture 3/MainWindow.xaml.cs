@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,32 @@ namespace lecture_3
 
             Debug.WriteLine($"vrPrevValue = {vrPrevValue}");
             Debug.WriteLine($"vrNewValue = {vrNewValue}");
+
+            //random sort list and dictionary to compare speed
+           
+            ListTuples = ListTuples.OrderBy(anyThing => Guid.NewGuid()).ToList();
+
+        }
+
+        //complete this method
+        private void writeListToTextFile(string FileName, List<Tuple<int, string>> ListTuples)
+        {
+            //if you dont provide a full path it will save file into the same folder as exe - where the exe is running 
+            File.WriteAllLines(FileName, ListTuples.Select(perPairs => perPairs.Item1 + "\t" + perPairs.Item2));
+            //" t is tab character"
+
+            using (StreamWriter swWrite =new StreamWriter(FileName))
+            {
+                foreach (var vrPerTuple in ListTuples)
+                {
+                    swWrite.WriteLine(vrPerTuple.Item1 + "\t" + vrPerTuple.Item2);
+                }
+
+                for (int i = 0; i < ListTuples.Count; i++)
+                {
+                    swWrite.WriteLine(ListTuples[i].Item1 + "\t" + ListTuples[i].Item2);
+                }
+            }
         }
     }
 }
