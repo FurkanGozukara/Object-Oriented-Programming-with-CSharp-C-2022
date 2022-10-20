@@ -61,10 +61,29 @@ namespace lecture_3
             Debug.WriteLine($"vrPrevValue = {vrPrevValue}");
             Debug.WriteLine($"vrNewValue = {vrNewValue}");
 
+            //lambda operators : https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+            //inline function
+            Func<(int, int, int), (int, int, int)> doubleThem = ns => (5 * ns.Item1, 2 * ns.Item2, 2 * ns.Item3);
+
+            var numbers = (2, 3, 4);
+            var doubledNumbers = doubleThem(numbers);
+            Console.WriteLine($"The set {numbers} doubled: {doubledNumbers}");
+            // Output:
+            // The set (2, 3, 4) doubled: (4, 6, 8)
+
+
+
             //random sort list and dictionary to compare speed
-           
+
+            writeListToTextFile("default_sort_list.txt", ListTuples);
+
             ListTuples = ListTuples.OrderBy(anyThing => Guid.NewGuid()).ToList();
 
+        }
+
+        Tuple<int, int, int> doubleThem(Tuple<int, int, int> vrTuple)
+        {
+            return Tuple.Create(vrTuple.Item1 * 5, vrTuple.Item2 * 2, vrTuple.Item3 * 3);
         }
 
         //complete this method
@@ -74,18 +93,26 @@ namespace lecture_3
             File.WriteAllLines(FileName, ListTuples.Select(perPairs => perPairs.Item1 + "\t" + perPairs.Item2));
             //" t is tab character"
 
-            using (StreamWriter swWrite =new StreamWriter(FileName))
-            {
-                foreach (var vrPerTuple in ListTuples)
-                {
-                    swWrite.WriteLine(vrPerTuple.Item1 + "\t" + vrPerTuple.Item2);
-                }
+            ListTuples[0] = new Tuple<int, string>(0, "111");//would this affect the list
 
-                for (int i = 0; i < ListTuples.Count; i++)
-                {
-                    swWrite.WriteLine(ListTuples[i].Item1 + "\t" + ListTuples[i].Item2);
-                }
-            }
+            //this is easier but slower method
+            //using (StreamWriter swWrite =new StreamWriter(FileName))
+            //{
+            //    foreach (var vrPerTuple in ListTuples)
+            //    {
+            //        swWrite.WriteLine(vrPerTuple.Item1 + "\t" + vrPerTuple.Item2);
+            //    }
+
+            //    for (int i = 0; i < ListTuples.Count; i++)
+            //    {
+            //        swWrite.WriteLine(ListTuples[i].Item1 + "\t" + ListTuples[i].Item2);
+            //    }
+            //}
+        }
+
+        private void writeDictioaryToFile(string FileName, Dictionary<int, string> DictTuples)
+        {
+            File.WriteAllLines(FileName, DictTuples.Select(pr => pr.Key + "\t" + pr.Value));
         }
     }
 }
