@@ -8,6 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="garbage collection example" HorizontalAlignment="Left" Margin="71,61,0,0" VerticalAlignment="Top" Height="66" Width="178" Click="Button_Click"/>
+        <Button Name="btnDownloadAsyncString" Content="download async string" HorizontalAlignment="Left" Margin="294,61,0,0" VerticalAlignment="Top" Height="76" Width="148" Click="btnDownloadAsyncString_Click"/>
+        <Button Name="btnParallelForEach" Content="parallel foreach" HorizontalAlignment="Left" Margin="496,61,0,0" VerticalAlignment="Top" Height="66" Width="132" Click="btnParallelForEach_Click"/>
 
     </Grid>
 </Window>
