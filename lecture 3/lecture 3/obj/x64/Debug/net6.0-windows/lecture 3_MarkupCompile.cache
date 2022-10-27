@@ -1,10 +1,10 @@
 ﻿lecture 3
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\Debug\net6.0-windows\
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\obj\x64\Debug\net6.0-windows\
 lecture_3
 none
 false
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 3\lecture 3\App.xaml
 11407045341
 
-5-441583259
+3-1233169557
 194-1103864946
 MainWindow.xaml;
 
-True
+False
 
