@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Reflection;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading;
@@ -18,6 +19,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace lecture_4
 {
@@ -114,42 +116,98 @@ namespace lecture_4
 
             MessageBox.Show(code);
         }
-
+        List<int> lstInts;
+        long irRunningTaskCount = 0;
         private async void btnParallelForEach_Click(object sender, RoutedEventArgs e)
         {
             Random rnd = new Random();
-            List<int> lstInts = new List<int>(Enumerable.Range(1, 100).Select(pr => rnd.Next()));
+            lstInts = new List<int>(Enumerable.Range(1, 1000).Select(pr => rnd.Next()));
 
-            lstInts = new List<int>(Enumerable.Range(1, 100));
+            lstInts = new List<int>(Enumerable.Range(1, 1000));
 
             ParallelOptions PO = new ParallelOptions();
             PO.MaxDegreeOfParallelism = 4;
 
-            Parallel.ForEach(lstInts, PO, async number =>
-            {
-                await debugFile(number);
-            });
+            //Parallel.ForEach(lstInts, PO, async number =>
+            //{
+            //    await debugFile(number);
+            //});
 
             long lrCounter = 0;
-            
+
             //our aim is that running 10 tasks simultanously and with the order they should start
             //so whenever a task is completed, start another task and keep running task count at 10
-           
-            for (int i = 0; i < lstInts.Count; i++)
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(1);
+            timer.Tick += taskScheduler;
+            timer.Start();
+        }
+
+        DispatcherTimer timer;
+        private static List<Task> lstOurRunningTasks = new List<Task>();
+        int irMaxSimultanousTaskCount = 20;
+
+        //this method will be called every 1 miliseconds
+        private void taskScheduler(object? sender, EventArgs e)
+        {
+            if (Interlocked.Read(ref irRunningTaskCount) < irMaxSimultanousTaskCount)
             {
-                 Task.Factory.StartNew(() => debugFile(i)).ContinueWith(task =>
-                 {
-                     Interlocked.Add(ref lrCounter, -1);
-                 });
-                lrCounter++;
+                lock (lstInts)//this will ensure thread synchronization between different calls of taskScheduler
+                {
+                    if (lstInts.Count == 0)
+                    {
+                        timer.Stop();
+                        return;
+                    }
+
+                    int irLocal = lstInts.FirstOrDefault();//this way with locatization we are preventing data in task starting
+                    lstInts.RemoveAt(0);
+                    Interlocked.Add(ref irRunningTaskCount, +1);
+                    var vrTask = Task.Factory.StartNew(() => debugFile(irLocal)).ContinueWith(task =>
+                      {
+                          lock (lstInts)
+                          {
+                              Interlocked.Add(ref irRunningTaskCount, -1);
+                          }
+                      });
+
+                    lstOurRunningTasks.Add(vrTask);
+                }
             }
         }
 
-        async private Task<bool> debugFile(int irVal)
+        async private Task<int> debugFile(int irVal)
         {
             Debug.WriteLine(irVal);
+
+         
+            int irRunningCount = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.Running).Count<Task>();
+            int irCompletedCount = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.RanToCompletion).Count<Task>();
+            int irWaiting = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.WaitingForActivation).Count<Task>();
+            Debug.WriteLine($"running: {irRunningCount} , completed : {irCompletedCount} , WaitingForActivation : {irWaiting}");
+
+            await downloadSite("https://www.toros.edu.tr");
+
+            await justWait(irVal);
+            return irVal;
+        }
+
+        async private Task<bool> justWait(int irVal)
+        {
             System.Threading.Thread.Sleep(irVal * 100);
             return true;
+        }
+    }
+
+    public static class ScheduledTaskAccess
+    {
+        public static Task[] GetScheduledTasksForDebugger(TaskScheduler ts)
+        {
+            var mi = ts.GetType().GetMethod("GetScheduledTasksForDebugger");
+            if (mi == null)
+                return null;
+            return (Task[])mi.Invoke(ts, new object[0]);
         }
     }
 }
