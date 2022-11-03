@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Name="btnTryDataRace" Content="try data race" HorizontalAlignment="Left" Margin="66,61,0,0" VerticalAlignment="Top" Height="58" Width="108" Click="btnTryDataRace_Click"/>
+        <Button Content="deep clone example" HorizontalAlignment="Left" Margin="222,61,0,0" VerticalAlignment="Top" Height="58" Width="139" Click="Button_Click"/>
 
     </Grid>
 </Window>

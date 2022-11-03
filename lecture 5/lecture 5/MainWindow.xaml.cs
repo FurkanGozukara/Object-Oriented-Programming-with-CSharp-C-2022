@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -117,6 +119,75 @@ namespace lecture_5
             for (int i = 0; i < irMaxLoopCount; i++)
             {
                 Interlocked.Increment(ref myNumber);
+            }
+        }
+
+        public class csStudent
+        {
+            public int irStudentId { get; set; }
+            public string srStudentName;
+            public double dblAvgScore { get; set; }
+            public int irCurrentSemester;
+            public string srPhoneNumber;
+            public string srEmail { get; set; }
+
+            public csStudent doCloneCopy()
+            {
+                return new csStudent { dblAvgScore = this.dblAvgScore, irCurrentSemester = this.irCurrentSemester, irStudentId = this.irStudentId, srEmail = this.srEmail, srPhoneNumber = this.srPhoneNumber, srStudentName = this.srStudentName };
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            csStudent FirstStudent = new csStudent
+            {
+                irStudentId = 1,
+                dblAvgScore = 3.53,
+                irCurrentSemester = 3,
+                srEmail = "firstStud@gmail.com",
+                srPhoneNumber = "+90 555 55 55",
+                srStudentName = "First Student"
+            };
+
+            //generate a duplicate of this student
+            //however, when i change value of firststudent, it musn't affect the clone student object
+            //this is deep cloning
+
+            csStudent student2 = FirstStudent;//this will compose only a shallow clone
+
+            student2.srStudentName = "student 2";
+
+            MessageBox.Show($"first: {FirstStudent.srStudentName} , second: {student2.srStudentName}"  );
+
+            csStudent student3 = FirstStudent.doCloneCopy();
+
+            FirstStudent.srPhoneNumber = "055555555";
+            student3.srPhoneNumber = "06666666";
+
+            MessageBox.Show($"1: {FirstStudent.srPhoneNumber} , 3: {student3.srPhoneNumber}");
+
+            csStudent student4 = Clone<csStudent>(FirstStudent);
+
+            student4.srStudentName = "student 4";
+
+            MessageBox.Show($"first: {FirstStudent.srStudentName} , second: {student4.srStudentName}");
+
+            //how to save an instance of object into a text file and then load back later
+
+            //you can save and load objects with serializing object into a json string
+            //you can use Newtonsoft.Json.Bson from nuget
+
+        }
+
+        public static T Clone<T>(T source)//this is generic type method therefore you can use this method on any of your custom class etc
+        {
+
+            DataContractSerializer serializer = new DataContractSerializer(typeof(T));
+            using (MemoryStream ms = new MemoryStream())
+            {
+                serializer.WriteObject(ms, source);
+                ms.Seek(0, SeekOrigin.Begin);
+                return (T)serializer.ReadObject(ms);
             }
         }
     }
