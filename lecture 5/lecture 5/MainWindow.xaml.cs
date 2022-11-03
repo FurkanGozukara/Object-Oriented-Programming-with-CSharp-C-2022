@@ -30,7 +30,41 @@ namespace lecture_5
 
         private void btnTryDataRace_Click(object sender, RoutedEventArgs e)
         {
-            Task.Factory.StartNew(() => { DoTasks(); });
+            Task.Factory.StartNew(() => { DoTasks_Refactored(); });
+        }
+
+        public delegate void DelDoIncrements();//this is used to assign methods into variables
+
+        private void DoTasks_Refactored()
+        {
+            List<Task> lstTasks = new List<Task>();
+
+            for (int upperLoop = 0; upperLoop < 2; upperLoop++)
+            {
+                DelDoIncrements myMethodCall = incrementVal_UnSafe;
+
+                switch (upperLoop)
+                {
+                    case 1:
+                        myMethodCall = incrementVal_Safe;
+                        break;
+                }
+
+                for (int i = 0; i < 10; i++)
+                {
+                    var vrTask = Task.Factory.StartNew(() => { myMethodCall(); });
+                    lstTasks.Add(vrTask);
+                }
+
+                Task.WaitAll(lstTasks.ToArray());
+
+                MessageBox.Show("my number result is " + myNumber.ToString("N0"));
+
+                myNumber = 0;
+                lstTasks = new List<Task>();
+            }
+
+            //so fix code to display 10 billion
         }
 
         private void DoTasks()
