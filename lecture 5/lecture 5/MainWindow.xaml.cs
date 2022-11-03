@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -176,7 +178,20 @@ namespace lecture_5
 
             //you can save and load objects with serializing object into a json string
             //you can use Newtonsoft.Json.Bson from nuget
+            //you need to do serialization and deserilization
 
+            string json = JsonConvert.SerializeObject(student4, Formatting.Indented);
+
+            var vrPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+  "\\jsontest.txt";
+            File.WriteAllText(vrPath, json);
+
+            csStudent csNewStud = JsonConvert.DeserializeObject<csStudent> (  File.ReadAllText(vrPath));//this is also a deep clone
+
+            List<string> lstWords = "So I will make a simple interface to write some text and save it and load it back.".Split(" ").ToList();
+
+            var vrSubPart = lstWords.Skip(4).Take(2);
+
+            var vrMerged = string.Join(" ", vrSubPart);
         }
 
         public static T Clone<T>(T source)//this is generic type method therefore you can use this method on any of your custom class etc

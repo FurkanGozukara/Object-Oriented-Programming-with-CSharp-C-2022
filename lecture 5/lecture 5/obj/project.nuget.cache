@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HXj1SkOVgXSz4nEfFuS7OpeGPHvijHCsZzGbomvxyAnCfu/fO440WFPD5OJEPu/RPxKk9v80a2Bp6YZNojff9Q==",
+  "dgSpecHash": "o2oiI1BXcYWy2I7yRMiz8tsrJFIr9naunH70lhd+do3TNOxDJqsi/TAPZe+ohsT4HFaVNUEFwu4D9KR945Zlmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 5\\lecture 5\\lecture 5.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

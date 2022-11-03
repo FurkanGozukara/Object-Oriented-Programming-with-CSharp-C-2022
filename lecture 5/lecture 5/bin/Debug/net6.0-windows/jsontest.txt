@@ -1,0 +1,8 @@
+{
+  "srStudentName": "student 4",
+  "irCurrentSemester": 3,
+  "srPhoneNumber": "055555555",
+  "irStudentId": 1,
+  "dblAvgScore": 3.53,
+  "srEmail": "firstStud@gmail.com"
+}
