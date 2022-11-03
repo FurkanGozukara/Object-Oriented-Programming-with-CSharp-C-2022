@@ -166,10 +166,9 @@ namespace lecture_4
                     Interlocked.Add(ref irRunningTaskCount, +1);
                     var vrTask = Task.Factory.StartNew(() => debugFile(irLocal)).ContinueWith(task =>
                       {
-                          lock (lstInts)
-                          {
-                              Interlocked.Add(ref irRunningTaskCount, -1);
-                          }
+
+                          Interlocked.Add(ref irRunningTaskCount, -1);
+
                       });
 
                     lstOurRunningTasks.Add(vrTask);
@@ -181,7 +180,7 @@ namespace lecture_4
         {
             Debug.WriteLine(irVal);
 
-         
+
             int irRunningCount = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.Running).Count<Task>();
             int irCompletedCount = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.RanToCompletion).Count<Task>();
             int irWaiting = lstOurRunningTasks.Where(pr => pr.Status == TaskStatus.WaitingForActivation).Count<Task>();
