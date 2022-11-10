@@ -87,6 +87,8 @@ namespace lecture_6
             myStudent.StudentName = null;
 
              vrList2 = myStudent.StudentName?.ToCharArray();
+
+            MessageBox.Show(runTimeValues.lstRandNumbers[1].ToString());
         }
 
         private string modifyVal(string srinput)
@@ -94,9 +96,23 @@ namespace lecture_6
             srinput ??= "my val";
             return srinput;
         }
+
+
     }
 
+    public static class runTimeValues
+    {
+        public static List<int> lstRandNumbers;
 
+       static runTimeValues()
+        {
+            lstRandNumbers = new List<int>();
+            for (int i = 0; i < 900000; i++)
+            {
+                lstRandNumbers.Add(i);
+            }
+        }
+    }
 
     public class student
     {
