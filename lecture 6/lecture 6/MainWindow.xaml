@@ -10,6 +10,8 @@
         <Button Content="immutable type" Name="btnImmutableType" HorizontalAlignment="Left" Margin="72,51,0,0" VerticalAlignment="Top" Height="35" Width="112" Click="btnImmutableType_Click"/>
         <Grid>
             <Button Content="field vs properties" x:Name="btnFieldProperty" HorizontalAlignment="Left" Margin="200,51,0,0" VerticalAlignment="Top" Height="35" Width="112" Click="btnFieldProperty_Click" />
+            <Button Content="method extension" HorizontalAlignment="Left" Margin="72,101,0,0" VerticalAlignment="Top" Height="39" Name="btnMethodExtension"  Width="114" Click="btnMethodExtension_Click"/>
+            <Button Content="method override" HorizontalAlignment="Left" Margin="200,101,0,0" VerticalAlignment="Top" Height="39" Width="112" Name="btnMethodoverride" Click="btnMethodoverride_Click"/>
 
         </Grid>
 

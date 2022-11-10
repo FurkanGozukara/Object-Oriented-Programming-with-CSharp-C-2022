@@ -3,6 +3,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -97,25 +98,117 @@ namespace lecture_6
             return srinput;
         }
 
+        private void btnMethodExtension_Click(object sender, RoutedEventArgs e)
+        {
+          var vals=  runTimeValues.lstNumbers3.doSomething();
 
+            string srVal = 12312.ToString();
+        }
+
+        private void btnMethodoverride_Click(object sender, RoutedEventArgs e)
+        {
+            Childclass child = new Childclass();
+          MessageBox.Show(  child.show());
+            myCustomClass child2 = new Childclass();
+            MessageBox.Show(child2.show());
+
+            MessageBox.Show("show 2 child : "+ child.show2());
+            MessageBox.Show("show 2 parent generated as child : " + child2.show2());
+        }
+    }
+
+    public class Childclass : myCustomClass
+    {
+        public string show()
+        {
+            return "shows child class";
+        }
+
+        new public static string  CustomFormatMyInt(int irVal)
+        {
+            return irVal.ToString("N0");
+        }
+        public override string show2()//in order to override you need to mark as virtual
+        {
+            return "shows child class 2";
+        }
+    }
+
+    public class myCustomClass
+    {
+        public virtual string show()
+        {
+            return "shows main class";
+        }
+
+        public virtual string show2()//in order to override you need to mark as virtual
+        {
+            return "shows main class 2";
+        }
+
+        public static string CustomFormatMyInt(int irVal)
+        {
+            return irVal.ToString("N2");
+        }
     }
 
     public static class runTimeValues
     {
+
+
+        public static string ToString(this int irNumber)
+        {
+            return irNumber.ToString("N0");
+        }
+
+
+        //when you put this keyword in front of input in a method it becomes a method extension. however method extensions has to be static and inside a static class
+        public static string doSomething(this List<int> lstNumbers)
+        {
+            return string.Join(" , ", lstNumbers.Skip(3));
+        }
+
         public static List<int> lstRandNumbers;
 
-       static runTimeValues()
+        public static Lazy<List<int>> lstNumbers2=new Lazy<List<int>>(initVals());
+            
+        public static List<int> lstNumbers3;
+
+        static Action generateNumbers()
+        {
+            return () =>
+            {
+                initVals();
+            };
+        }
+
+        public static  List<int> initVals()
+        {
+            List<int> listVals = new();
+       
+            for (int i = 0; i < 900000; i++)
+            {
+                listVals.Add(i);
+            }
+            return listVals;
+        }
+
+        static runTimeValues()
         {
             lstRandNumbers = new List<int>();
             for (int i = 0; i < 900000; i++)
             {
                 lstRandNumbers.Add(i);
             }
+
+            lstNumbers3 = initVals();
         }
     }
 
     public class student
     {
+
+
         public int StudentId { get; set; }
 
         public string StudentName;
