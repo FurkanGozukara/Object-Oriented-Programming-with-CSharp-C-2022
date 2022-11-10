@@ -193,7 +193,7 @@ namespace lecture_5
 
             var vrMerged = string.Join(" ", vrSubPart);
         }
-
+        //immutable
         public static T Clone<T>(T source)//this is generic type method therefore you can use this method on any of your custom class etc
         {
 

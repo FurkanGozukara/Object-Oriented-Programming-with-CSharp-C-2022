@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static lecture_6.myCustomClass;
 
 namespace lecture_6
 {
@@ -22,13 +23,22 @@ namespace lecture_6
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        const int myVar= 321;//this is assigned at compile time so you have to set its value at defining place
+        readonly int myVar2;//you can be only set inside construtor or setter - not in any other method
+
+
         public MainWindow()
         {
+           // myVar2 = 312;
+       
             InitializeComponent();
         }
 
         private void btnImmutableType_Click(object sender, RoutedEventArgs e)
         {
+          //myVar2 = 43534; this wont work because it is not inside construtor
+
             string first = "test";
             first = first + " test";//this will not modify the value but it will generate a new instance of value
 
@@ -114,12 +124,48 @@ namespace lecture_6
 
             MessageBox.Show("show 2 child : "+ child.show2());
             MessageBox.Show("show 2 parent generated as child : " + child2.show2());
+
+            runTimeValues.ToString2(2131);
+            2131.ToString2();
+            2131.ToString2(23432);
+
+            myCustomClass.CustomFormatMyInt(12312);
+
+            CustomFormatMyInt(12312);
+            irTesT = 12;
+
+            try
+            {
+                Convert.ToInt32("2323a432");
+            }
+            catch (FormatException E)
+            {
+                MessageBox.Show("invalid format");
+            }
+            catch (OverflowException E)
+            {
+                MessageBox.Show("too big number");
+            }
+
+            try
+            {
+                Convert.ToInt32("234325324532432");
+            }
+            catch (FormatException E)
+            {
+                MessageBox.Show("invalid format");
+            }
+            catch (OverflowException E)
+            {
+                MessageBox.Show("too big number");
+            }
+
         }
     }
 
     public class Childclass : myCustomClass
     {
-        public string show()
+        new public string  show()//so this only hides the show method of parent class but still exists
         {
             return "shows child class";
         }
@@ -128,6 +174,8 @@ namespace lecture_6
         {
             return irVal.ToString("N0");
         }
+
+        //this overrides and destroy show2 method of parent class
         public override string show2()//in order to override you need to mark as virtual
         {
             return "shows child class 2";
@@ -136,6 +184,9 @@ namespace lecture_6
 
     public class myCustomClass
     {
+        public int ir = 5;
+        public static int irTesT=5;
+
         public virtual string show()
         {
             return "shows main class";
@@ -154,9 +205,13 @@ namespace lecture_6
 
     public static class runTimeValues
     {
+        //method overloading
+        public static string ToString2(this int irNumber, int irNumber2)
+        {
+            return irNumber.ToString("N0");
+        }
 
-
-        public static string ToString(this int irNumber)
+        public static string ToString2(this int irNumber)
         {
             return irNumber.ToString("N0");
         }
