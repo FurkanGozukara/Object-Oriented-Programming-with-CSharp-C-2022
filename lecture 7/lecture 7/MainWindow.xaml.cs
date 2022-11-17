@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
@@ -158,23 +159,25 @@ namespace lecture_7
 
         private async void btnInsertElemts_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Factory.StartNew(async () => await addElement()).ContinueWith((prop) =>
-              {
-                  btnInsertElemts_Click(null, null);
-              });
+          await  runForever();
         }
 
-        private async Task<bool> addElement()
+        private async Task runForever()
         {
-            System.Threading.Thread.Sleep(1000);
+            await Task.Factory.StartNew(async () => {await addElement(); });
+            await Task.Delay(5555);
+            await runForever();
+        }
 
+        private async Task addElement()
+        {
+         
+     //this below one will wait until listbox is updated    
             lstBox1.Dispatcher.Invoke(() => { lstBox1.Items.Add(DateTime.Now.ToString()); });
+      //this will modify listbox whenever possible and this line will be immediately executed      lstBox1.Dispatcher.BeginInvoke(() => { lstBox1.Items.Add(DateTime.Now.ToString()); });
 
             // lstBox1.Items.Add(DateTime.Now.ToString()); this will cause error
             // The calling thread cannot access this object because a different thread owns it.
-
-
-            return true;
         }
     }
 
