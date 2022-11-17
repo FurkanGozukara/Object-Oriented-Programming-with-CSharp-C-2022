@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Name="btnUnhanlederror" Content="unhandled error" HorizontalAlignment="Left" Margin="58,43,0,0" VerticalAlignment="Top" Height="46" Width="129" Click="btnUnhanlederror_Click"/>
+        <Button Content="simple generic example" Name="btnSimpleGenericExample" HorizontalAlignment="Left" Margin="67,121,0,0" VerticalAlignment="Top" Height="50" Width="213" Click="btnSimpleGenericExample_Click"/>
 
     </Grid>
 </Window>
