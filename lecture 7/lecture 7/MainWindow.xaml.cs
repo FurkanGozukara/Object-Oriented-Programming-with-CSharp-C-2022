@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
@@ -51,6 +52,10 @@ namespace lecture_7
             myDel _del2 = myAwesomeMethod3;
 
             testMethod(_del2);
+
+            _del2 = writeToFile;
+
+            testMethod(_del2);
         }
 
         private void testMethod(myDel methods)
@@ -59,6 +64,11 @@ namespace lecture_7
         }
 
         private delegate void myDel();
+
+        private void writeToFile()
+        {
+            File.WriteAllText("gg.txt", "gg");
+        }
 
         private void myAwesomeMethod()
         {
