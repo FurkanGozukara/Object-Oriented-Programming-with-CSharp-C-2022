@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,7 +38,41 @@ namespace lecture_7
                 
             }
 
-            Convert.ToInt16("asd212");
+            //Convert.ToInt16("asd212");
+
+            //myAwesomeMethod();
+
+            myDel _del = myAwesomeMethod;
+
+            _del += myAwesomeMethod2;
+
+            _del();
+
+            myDel _del2 = myAwesomeMethod3;
+
+            testMethod(_del2);
+        }
+
+        private void testMethod(myDel methods)
+        {
+            methods();
+        }
+
+        private delegate void myDel();
+
+        private void myAwesomeMethod()
+        {
+            MessageBox.Show("awesome method call");
+        }
+
+        private void myAwesomeMethod2()
+        {
+            MessageBox.Show("awesome method call 2");
+        }
+
+        private void myAwesomeMethod3()
+        {
+            MessageBox.Show("awesome method call 3");
         }
     }
 }
