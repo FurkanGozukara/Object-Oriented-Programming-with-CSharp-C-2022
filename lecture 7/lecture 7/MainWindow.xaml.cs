@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace lecture_7
             catch (Exception)
             {
 
-                
+
             }
 
             //Convert.ToInt16("asd212");
@@ -70,7 +71,7 @@ namespace lecture_7
 
         private void testMethod3(string sr)
         {
-            MessageBox.Show(sr+ sr);
+            MessageBox.Show(sr + sr);
         }
 
         private void testMethod2(string sr)
@@ -129,10 +130,10 @@ namespace lecture_7
 
             DataStore<string> myDataStr = new DataStore<string>();
             myDataStr.data[2] = "gg wp";
-            
+
             //this is boxing
             object test = myDataStr;
-            object test2 = new List<Int16> { 231, 321, 12, 12 } ;
+            object test2 = new List<Int16> { 231, 321, 12, 12 };
 
             List<object> myList = new List<object>();
 
@@ -140,10 +141,62 @@ namespace lecture_7
             myList.Add(test2);
 
             MessageBox.Show(myList[1].ToString());
-            //unboxing
+            //unboxing (List<Int16>) this is expensive operation
             MessageBox.Show(((List<Int16>)myList[1])[1].ToString());
+
+            MessageBox.Show(HelperMethods.irNum.ToString());//this one wont cause init of static class
+            MessageBox.Show(HelperMethods.irNum2.ToString());//however when this one is used the constructor of the static class will be called
+
+            // MessageBox.Show(myNumbersList.Value[2].ToString());
+        }
+
+        Lazy<List<int>> myNumbersList = new Lazy<List<int>>(Enumerable.Range(1, 99999999)
+           .Select(x => x).ToList());
+
+        List<int> myNumbersList2 = new List<int>(Enumerable.Range(1, 99999999)
+         .Select(x => x).ToList());
+
+        private async void btnInsertElemts_Click(object sender, RoutedEventArgs e)
+        {
+            await Task.Factory.StartNew(async () => await addElement()).ContinueWith((prop) =>
+              {
+                  btnInsertElemts_Click(null, null);
+              });
+        }
+
+        private async Task<bool> addElement()
+        {
+            System.Threading.Thread.Sleep(1000);
+
+            lstBox1.Dispatcher.Invoke(() => { lstBox1.Items.Add(DateTime.Now.ToString()); });
+
+            // lstBox1.Items.Add(DateTime.Now.ToString()); this will cause error
+            // The calling thread cannot access this object because a different thread owns it.
+
+
+            return true;
         }
     }
 
- 
+    public static class HelperMethods
+    {
+        public static Dictionary<int, int> dicNumbers;
+
+        public const int irNum = 312;//this is compile time assigned
+
+        public static int irNum2 = 312;//this is runtime assigned
+        public static readonly int irNum3;
+
+        static HelperMethods()
+        {
+            // irNum = 321;//this gives error because it is compile time assigned
+            irNum3 = 123;//this works because we are inside the constructor of the class
+
+            dicNumbers = new Dictionary<int, int>();
+            for (int i = 1; i < 8888888; i++)
+            {
+                dicNumbers.Add(i, i);
+            }
+        }
+    }
 }
