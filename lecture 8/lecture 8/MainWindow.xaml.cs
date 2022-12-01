@@ -31,28 +31,42 @@ namespace lecture_8
             txtStudentName.LostFocus += TxtStudentName_LostFocus;
 
             txtUserId.Text = _usernameMsg;
-            txtUserId.GotFocus += TxtUserId_GotFocus;
+            txtUserId.GotFocus += TxtStudentName_GotFocus;
+            txtUserId.LostFocus += TxtStudentName_LostFocus;
+
         }
 
-        private void TxtUserId_GotFocus(object sender, RoutedEventArgs e)
+        private string returnMsg(object sender)
         {
-            throw new NotImplementedException();
+            string srmsg = _usernameMsg;
+
+            switch (((TextBox)sender).Name)//this is unboxing
+            {
+                case "txtUserId":
+                    srmsg = _userIdMsg;
+                    break;
+            }
+            return srmsg;
         }
 
         private void TxtStudentName_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtStudentName.Text.Trim()))
+            var srmsg = returnMsg(sender);
+
+            if (string.IsNullOrEmpty(((TextBox)sender).Text.Trim()))
             {
-                txtStudentName.Text = _usernameMsg;
+                ((TextBox)sender).Text = srmsg;
             }
         }
 
         //we are defining placeholder equivalament of html css
         private void TxtStudentName_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (txtStudentName.Text == _usernameMsg)
+            var srmsg = returnMsg(sender);
+
+            if (((TextBox)sender).Text == srmsg)
             {
-                txtStudentName.Text = "";
+                ((TextBox)sender).Text = "";
             }
         }
     }
