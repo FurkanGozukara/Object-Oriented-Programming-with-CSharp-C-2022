@@ -19,3 +19,6 @@ C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\n
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.pdb
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.genruntimeconfig.cache
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\ref\lecture 8.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\CommunityToolkit.Common.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\Microsoft.Toolkit.Mvvm.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.csproj.CopyComplete

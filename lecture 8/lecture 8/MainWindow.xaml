@@ -12,6 +12,9 @@
         <Label Name="lblNumberOfElements" Content="{Binding numberOfListBoxElements}" HorizontalAlignment="Left" Margin="470,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.75,1.304" Width="303"/>
         <ListBox Name="lstBoxItems" Margin="470,98,27,23"/>
         <Button Content="add student" Name="addStudent" HorizontalAlignment="Left" Margin="39,66,0,0" VerticalAlignment="Top" Height="48" Width="97" Click="addStudent_Click"/>
+        <Label Name="lblTest2" Content="{Binding IrAnotherCounter}" HorizontalAlignment="Left" Margin="166,64,0,0" VerticalAlignment="Top"/>
+        <Button Content="generate random numbers with yield" HorizontalAlignment="Left" Margin="39,169,0,0" VerticalAlignment="Top" Height="48" Width="235" Click="Button_Click"/>
+        <ListBox x:Name="lstBox2" Margin="39,255,594,31"/>
 
     </Grid>
 </Window>

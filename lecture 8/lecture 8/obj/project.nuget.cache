@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MpvDIXDLmOEenfxqBalpwAewF1hO7RsEmfJvFnHe+83Qe15nTvCNZqC/SyTXw2BpU8oAg2waf++ywk1l8KQSfA==",
+  "dgSpecHash": "VbGDF5o+2MIKfUsMiG2X4U7YqR7sRZidU/CjfOpa6LOJKnIp6LjixVKzV0s+3vqxhxkdKn4E+YAcQEKiLAI0wQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 8\\lecture 8\\lecture 8.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\communitytoolkit.common\\8.0.0\\communitytoolkit.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+  ],
   "logs": []
 }
