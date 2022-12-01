@@ -1,0 +1,21 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\lecture 8.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\lecture 8.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\lecture 8.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\lecture 8.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\bin\Debug\net6.0-windows\lecture 8.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.g.resources
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\refint\lecture 8.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\lecture 8.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 8\lecture 8\obj\Debug\net6.0-windows\ref\lecture 8.dll
