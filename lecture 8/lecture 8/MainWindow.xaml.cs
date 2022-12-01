@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,7 +20,7 @@ namespace lecture_8
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private const string _usernameMsg = "Enter Username";
         private const string _userIdMsg = "Enter UserId";
@@ -26,14 +28,14 @@ namespace lecture_8
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
             txtStudentName.Text = _usernameMsg;
             txtStudentName.GotFocus += TxtStudentName_GotFocus;
             txtStudentName.LostFocus += TxtStudentName_LostFocus;
 
-            txtUserId.Text = _usernameMsg;
+            txtUserId.Text = _userIdMsg;
             txtUserId.GotFocus += TxtStudentName_GotFocus;
             txtUserId.LostFocus += TxtStudentName_LostFocus;
-
         }
 
         private string returnMsg(object sender)
@@ -68,6 +70,46 @@ namespace lecture_8
             {
                 ((TextBox)sender).Text = "";
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // This method is called by the Set accessor of each property.
+        // The CallerMemberName attribute that is applied to the optional propertyName
+        // parameter causes the property name of the caller to be substituted as an argument.
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private string _numberOfListBoxElements;
+        public string numberOfListBoxElements
+        {
+            get { return _numberOfListBoxElements; }
+            set { _numberOfListBoxElements = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private int _irElementCount;
+        public int irElementCount
+        {
+            get { return _irElementCount; }
+            set
+            {
+                _irElementCount = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private void addStudent_Click(object sender, RoutedEventArgs e)
+        {
+            lstBoxItems.Items.Add(txtUserId.Text + " : " + txtStudentName.Text);
+            numberOfListBoxElements = "Number of elements in the list box: "+ lstBoxItems.Items.Count.ToString("N0");
+            irElementCount++;
         }
     }
 }

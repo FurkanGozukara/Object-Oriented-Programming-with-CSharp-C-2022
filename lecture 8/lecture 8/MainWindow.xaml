@@ -9,6 +9,9 @@
     <Grid>
         <TextBox Name="txtStudentName"  HorizontalAlignment="Left" Margin="176,27,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtUserId"  HorizontalAlignment="Left" Margin="39,27,0,0" TextWrapping="Wrap" Text="userid" VerticalAlignment="Top" Width="120"/>
+        <Label Name="lblNumberOfElements" Content="{Binding numberOfListBoxElements}" HorizontalAlignment="Left" Margin="470,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.75,1.304" Width="303"/>
+        <ListBox Name="lstBoxItems" Margin="470,98,27,23"/>
+        <Button Content="add student" Name="addStudent" HorizontalAlignment="Left" Margin="39,66,0,0" VerticalAlignment="Top" Height="48" Width="97" Click="addStudent_Click"/>
 
     </Grid>
 </Window>
