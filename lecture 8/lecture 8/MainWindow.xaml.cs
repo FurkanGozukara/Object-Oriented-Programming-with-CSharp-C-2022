@@ -21,6 +21,7 @@ namespace lecture_8
     public partial class MainWindow : Window
     {
         private const string _usernameMsg = "Enter Username";
+        private const string _userIdMsg = "Enter UserId";
 
         public MainWindow()
         {
@@ -28,6 +29,14 @@ namespace lecture_8
             txtStudentName.Text = _usernameMsg;
             txtStudentName.GotFocus += TxtStudentName_GotFocus;
             txtStudentName.LostFocus += TxtStudentName_LostFocus;
+
+            txtUserId.Text = _usernameMsg;
+            txtUserId.GotFocus += TxtUserId_GotFocus;
+        }
+
+        private void TxtUserId_GotFocus(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void TxtStudentName_LostFocus(object sender, RoutedEventArgs e)
