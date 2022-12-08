@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using lecture_9_part2;
 using System.Drawing;
 using System.Collections.ObjectModel;
+using System.Reflection;
 
 namespace lecture_9
 {
@@ -63,6 +64,23 @@ namespace lecture_9
                 _irId++, Random.Shared.Next(20, 60));
 
             return _customStudent;
+        }
+
+        private void getProp_Click(object sender, RoutedEventArgs e)
+        {
+            Type customStudentType = typeof(customStudent);
+
+            PropertyInfo[] properties = customStudentType.GetProperties();
+
+            List<string> lstStringProperties = new List<string>();
+
+            foreach (var prop in properties)
+            {
+                if(prop.PropertyType.FullName == "System.String")
+                {
+                    lstStringProperties.Add(prop.Name);
+                }
+            }
         }
     }
 

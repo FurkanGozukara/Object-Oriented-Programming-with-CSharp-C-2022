@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using lecture_9_dll;
 using System.IO;
+using System.Reflection;
 
 namespace lecture_9
 {
@@ -35,15 +36,30 @@ namespace lecture_9
             }
         }
 
-         
+        private static Brush PickBrush()
+        {
+            Brush result = Brushes.Transparent;
+
+            Random rnd = new Random();
+
+            Type brushesType = typeof(Brushes);
+
+            PropertyInfo[] properties = brushesType.GetProperties();
+
+            int random = rnd.Next(properties.Length);
+            result = (Brush)properties[random].GetValue(null, null);
+
+            return result;
+        }
+
 
         public customStudent(string _name, int _id, int _age)
         {
-            this.Foreground = Brushes.Red;
-            this.Background = Brushes.Green;
+            this.Foreground = PickBrush();
+            this.Background = PickBrush();
             this.FontStyle = FontStyles.Italic;
             this.FontSize = 22.1;
-            this.Name = _name;  
+            this.name = _name;  
             this.id = _id;
             this.age = _age;
             this.Content = DisplayObject;

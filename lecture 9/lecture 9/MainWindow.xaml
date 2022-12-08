@@ -10,6 +10,7 @@
         <Button Content="use another namespace example" Name="btnUseAnotherNameSpace" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="53" Width="202" Click="btnUseAnotherNameSpace_Click"/>
         <ListBox x:Name="lstBoxStudents" Margin="348,24,44,191"/>
         <Button x:Name="btnAddSomeCustomStudents" Content="add some custom students" HorizontalAlignment="Left" Margin="15,88,0,0" VerticalAlignment="Top" Height="46" Width="162" Click="btnAddSomeCustomStudents_Click"/>
+        <Button Content="get properties example" Name="getProp" HorizontalAlignment="Left" Margin="24,167,0,0" VerticalAlignment="Top" Height="50" Width="92" Click="getProp_Click"/>
 
     </Grid>
 </Window>
