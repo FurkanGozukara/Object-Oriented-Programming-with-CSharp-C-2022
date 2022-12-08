@@ -35,13 +35,18 @@ namespace lecture_9
             }
         }
 
-        public customStudent()
+         
+
+        public customStudent(string _name, int _id, int _age)
         {
             this.Foreground = Brushes.Red;
             this.Background = Brushes.Green;
             this.FontStyle = FontStyles.Italic;
             this.FontSize = 22.1;
-          
+            this.Name = _name;  
+            this.id = _id;
+            this.age = _age;
+            this.Content = DisplayObject;
 
         }
 
@@ -50,5 +55,8 @@ namespace lecture_9
             return DisplayObject;
         }
 
+   
+        }
+         
     }
-}
+

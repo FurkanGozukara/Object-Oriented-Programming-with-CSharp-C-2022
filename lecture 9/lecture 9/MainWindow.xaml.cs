@@ -29,10 +29,10 @@ namespace lecture_9
         public MainWindow()
         {
             InitializeComponent();
-          
-            lstBoxStudents.ItemsSource = ListBoxElements;
+            this.DataContext = this;
+           // lstBoxStudents.ItemsSource = ListBoxElements;
             
-            lstBoxStudents.DisplayMemberPath = "DisplayObject";
+            //lstBoxStudents.DisplayMemberPath = "DisplayObject";
         }
 
         private void btnUseAnotherNameSpace_Click(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace lecture_9
         {
             for (int i = 0; i < 10; i++)
             {
-                ListBoxElements.Add(returnRandomStudent());
+                lstBoxStudents.Items.Add(returnRandomStudent());
             }
         }
 
@@ -59,11 +59,8 @@ namespace lecture_9
 
         private static customStudent returnRandomStudent()
         {
-            customStudent _customStudent = new customStudent();
-
-            _customStudent.age = Random.Shared.Next(20, 60);
-            _customStudent.id = _irId++;//first assign then increment
-            _customStudent.name = customStudent.returnCustomName();
+            customStudent _customStudent = new customStudent(customStudent.returnCustomName(),
+                _irId++, Random.Shared.Next(20, 60));
 
             return _customStudent;
         }
