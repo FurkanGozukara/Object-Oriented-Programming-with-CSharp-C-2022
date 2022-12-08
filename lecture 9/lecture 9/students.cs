@@ -8,11 +8,21 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using lecture_9_dll;
+using System.IO;
 
 namespace lecture_9
 {
+
+
     public class customStudent : ListBoxItem, lecture_9_dll.customStudent
     {
+        public static string returnCustomName()
+        {
+            return ListOfNames[Random.Shared.Next(0, ListOfNames.Count)];
+        }
+
+        public static readonly List<string> ListOfNames = File.ReadAllLines("names.txt").ToList();
+
         public string name { get; set; }
         public int id { get; set; }
         public int age { get; set; }
@@ -31,7 +41,7 @@ namespace lecture_9
             this.Background = Brushes.Green;
             this.FontStyle = FontStyles.Italic;
             this.FontSize = 22.1;
-            
+          
 
         }
 

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using lecture_9_part2;
 using System.Drawing;
+using System.Collections.ObjectModel;
 
 namespace lecture_9
 {
@@ -22,9 +23,16 @@ namespace lecture_9
     /// </summary>
     public partial class MainWindow : Window
     {
+         ObservableCollection<customStudent> ListBoxElements  = new ObservableCollection<customStudent>();
+
+
         public MainWindow()
         {
             InitializeComponent();
+          
+            lstBoxStudents.ItemsSource = ListBoxElements;
+            
+            lstBoxStudents.DisplayMemberPath = "DisplayObject";
         }
 
         private void btnUseAnotherNameSpace_Click(object sender, RoutedEventArgs e)
@@ -41,9 +49,27 @@ namespace lecture_9
         //I want these student objects to be displayed as "Id: 1, Name: Test, Age: 25";
         private void btnAddSomeCustomStudents_Click(object sender, RoutedEventArgs e)
         {
-            lstBoxStudents.Items.Add(new customStudent { age = 25, name = "test", id = 1 }.ToString());
+            for (int i = 0; i < 10; i++)
+            {
+                ListBoxElements.Add(returnRandomStudent());
+            }
+        }
+
+        private static int _irId = 1;
+
+        private static customStudent returnRandomStudent()
+        {
+            customStudent _customStudent = new customStudent();
+
+            _customStudent.age = Random.Shared.Next(20, 60);
+            _customStudent.id = _irId++;//first assign then increment
+            _customStudent.name = customStudent.returnCustomName();
+
+            return _customStudent;
         }
     }
+
+
 
     public static class HelperMethods
     {

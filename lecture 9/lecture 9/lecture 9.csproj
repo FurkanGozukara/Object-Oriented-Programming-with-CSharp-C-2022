@@ -13,4 +13,10 @@
     <ProjectReference Include="..\lecture 9_part2\lecture 9_part2.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
