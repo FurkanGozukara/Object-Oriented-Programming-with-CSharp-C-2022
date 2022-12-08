@@ -2,10 +2,15 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>lecture_9</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lecture 9 dll\lecture 9 dll.csproj" />
+    <ProjectReference Include="..\lecture 9_part2\lecture 9_part2.csproj" />
+  </ItemGroup>
 
 </Project>

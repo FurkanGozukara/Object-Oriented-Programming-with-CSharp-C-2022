@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "lecture 9 dll/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/lecture 9 dll.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/lecture 9 dll.dll": {}
+        }
+      },
+      "lecture 9_part2/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/lecture 9_part2.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/lecture 9_part2.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "lecture 9 dll/1.0.0": {
+      "type": "project",
+      "path": "../lecture 9 dll/lecture 9 dll.csproj",
+      "msbuildProject": "../lecture 9 dll/lecture 9 dll.csproj"
+    },
+    "lecture 9_part2/1.0.0": {
+      "type": "project",
+      "path": "../lecture 9_part2/lecture 9_part2.csproj",
+      "msbuildProject": "../lecture 9_part2/lecture 9_part2.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "lecture 9 dll >= 1.0.0",
+      "lecture 9_part2 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\": {},
@@ -29,7 +64,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
@@ -37,9 +72,16 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 9\\lecture 9 dll\\lecture 9 dll.csproj": {
+              "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 9\\lecture 9 dll\\lecture 9 dll.csproj"
+            },
+            "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 9\\lecture 9_part2\\lecture 9_part2.csproj": {
+              "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 9\\lecture 9_part2\\lecture 9_part2.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -49,8 +91,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "imports": [
           "net461",
           "net462",

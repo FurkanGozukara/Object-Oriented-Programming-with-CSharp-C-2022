@@ -8,6 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="use another namespace example" Name="btnUseAnotherNameSpace" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="53" Width="202" Click="btnUseAnotherNameSpace_Click"/>
+        <ListBox x:Name="lstBoxStudents" Margin="348,24,44,191"/>
+        <Button x:Name="btnAddSomeCustomStudents" Content="add some custom students" HorizontalAlignment="Left" Margin="15,88,0,0" VerticalAlignment="Top" Height="46" Width="162" Click="btnAddSomeCustomStudents_Click"/>
 
     </Grid>
 </Window>

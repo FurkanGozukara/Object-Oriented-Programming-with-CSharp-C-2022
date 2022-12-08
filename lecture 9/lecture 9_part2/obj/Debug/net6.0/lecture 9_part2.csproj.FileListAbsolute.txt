@@ -1,0 +1,15 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\bin\Debug\net6.0\lecture 9_part2.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\bin\Debug\net6.0\lecture 9_part2.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\bin\Debug\net6.0\lecture 9_part2.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\bin\Debug\net6.0\lecture 9_part2.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\bin\Debug\net6.0\lecture 9_part2.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\refint\lecture 9_part2.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\lecture 9_part2.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9_part2\obj\Debug\net6.0\ref\lecture 9_part2.dll

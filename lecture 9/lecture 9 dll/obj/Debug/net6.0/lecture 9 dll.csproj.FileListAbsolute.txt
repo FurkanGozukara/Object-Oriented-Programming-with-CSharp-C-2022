@@ -1,0 +1,12 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\bin\Debug\net6.0\lecture 9 dll.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\bin\Debug\net6.0\lecture 9 dll.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\bin\Debug\net6.0\lecture 9 dll.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\refint\lecture 9 dll.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\lecture 9 dll.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 9\lecture 9 dll\obj\Debug\net6.0\ref\lecture 9 dll.dll

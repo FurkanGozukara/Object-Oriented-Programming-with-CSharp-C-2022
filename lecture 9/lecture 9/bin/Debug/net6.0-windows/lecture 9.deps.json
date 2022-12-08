@@ -1,0 +1,43 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "lecture 9/1.0.0": {
+        "runtime": {
+          "lecture 9.dll": {}
+        }
+      },
+      "lecture 9 dll/1.0.0": {
+        "runtime": {
+          "lecture 9 dll.dll": {}
+        }
+      },
+      "lecture 9_part2/1.0.0": {
+        "runtime": {
+          "lecture 9_part2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "lecture 9/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "lecture 9 dll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "lecture 9_part2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

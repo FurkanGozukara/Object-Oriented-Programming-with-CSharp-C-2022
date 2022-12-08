@@ -12,5 +12,10 @@ namespace lecture_9_part2
         {
             return "this is coming from another namespace";
         }
+
+        public static void testConfliction()
+        {
+
+        }
     }
 }
