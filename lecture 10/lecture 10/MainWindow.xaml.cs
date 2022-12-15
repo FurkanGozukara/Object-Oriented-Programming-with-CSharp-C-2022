@@ -48,11 +48,11 @@ namespace lecture_10
             using OOP2022Context _context = new OOP2022Context();
             Repository myRepo = new Repository(_context);
             Students _Student = new Students();
-            _Student.FullName = "Furkan Gözükara";
+            _Student.FullName = "Furkan Gözükara 2";
             _Student.Gpa = 3.77M;
 
 
-            await myRepo.Create(_Student);
+            await myRepo.Create(_Student).ConfigureAwait(false);
         }
     }
 }
