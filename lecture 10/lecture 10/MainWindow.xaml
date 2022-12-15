@@ -12,6 +12,12 @@
         <TextBox Name="txtGPA" HorizontalAlignment="Left" Margin="275,86,0,0" TextWrapping="Wrap" Text="GPA" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="275,128,0,0" TextWrapping="Wrap" Text="email" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnAddStudent" Content="add student to db" HorizontalAlignment="Left" Margin="447,43,0,0" VerticalAlignment="Top" Height="62" Width="134" Click="btnAddStudent_Click"/>
+        <TextBox Name="txtStudentId" HorizontalAlignment="Left" Margin="275,199,0,0" TextWrapping="Wrap" Text="student id" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGetStudent" Content="get student" HorizontalAlignment="Left" Margin="447,0,0,0" VerticalAlignment="Center" Height="66" Width="105" Click="btnGetStudent_Click"/>
+        <Button x:Name="btnUpdate" Content="update student" HorizontalAlignment="Left" Margin="447,282,0,0" VerticalAlignment="Top" Height="58" Width="105" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDeleteStudent" Content="delete student" HorizontalAlignment="Left" Margin="593,0,0,0" VerticalAlignment="Center" Height="66" Width="92" Click="btnDeleteStudent_Click"/>
+        <ListBox Name="lstbox" Margin="21,184,554,19"/>
+        <Button x:Name="btnGetAll" Content="get all" HorizontalAlignment="Left" Margin="583,290,0,0" VerticalAlignment="Top" Height="50" Width="80" Click="btnGetAll_Click"/>
 
     </Grid>
 </Window>

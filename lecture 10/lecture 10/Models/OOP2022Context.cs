@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -25,6 +26,7 @@ namespace lecture_10.Models
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-ULH4M26;Initial Catalog=OOP2022;Integrated Security=True;Encrypt=False");
+                optionsBuilder.LogTo(message => Debug.WriteLine(message));
             }
         }
 

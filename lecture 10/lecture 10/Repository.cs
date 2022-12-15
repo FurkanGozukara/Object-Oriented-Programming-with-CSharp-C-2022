@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,16 +34,18 @@ namespace lecture_10
             await _context.SaveChangesAsync();
         }
 
-        public async Task Update<T>(T entity) where T : class
+        public async Task<int> Update<T>(T entity) where T : class
         {
+            if (entity is null) return 0;
             _context.Set<T>().Update(entity);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
 
-        public async Task Delete<T>(T entity) where T : class
+        public async Task<int> Delete<T>(T entity) where T : class
         {
+            if (entity is null) return 0;
             _context.Set<T>().Remove(entity);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
     }
 }
