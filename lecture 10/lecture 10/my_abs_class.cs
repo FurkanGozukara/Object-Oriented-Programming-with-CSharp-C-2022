@@ -32,7 +32,7 @@ namespace lecture_10
 
             public string DisplayArea()
             {
-               return string.Format($"The area of the {this.GetType()} is: {{0}}", Area());
+               return string.Format($"The area of the {this.GetType().Name} is: {{0}}", Area());
             }
         }
 

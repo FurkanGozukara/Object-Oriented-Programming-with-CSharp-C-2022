@@ -8,6 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Name="btnAbstractExample" Content="abstract class example" HorizontalAlignment="Left" Margin="42,35,0,0" VerticalAlignment="Top" Height="51" Width="159" Click="btnAbstractExample_Click"/>
+        <TextBox Name="txtStudentName" HorizontalAlignment="Left" Margin="275,43,0,0" TextWrapping="Wrap" Text="student name" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtGPA" HorizontalAlignment="Left" Margin="275,86,0,0" TextWrapping="Wrap" Text="GPA" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="275,128,0,0" TextWrapping="Wrap" Text="email" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAddStudent" Content="add student to db" HorizontalAlignment="Left" Margin="447,43,0,0" VerticalAlignment="Top" Height="62" Width="134" Click="btnAddStudent_Click"/>
 
     </Grid>
 </Window>

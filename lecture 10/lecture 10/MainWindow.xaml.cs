@@ -1,4 +1,6 @@
-﻿using System;
+﻿using lecture_10.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +23,8 @@ namespace lecture_10
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,7 +40,19 @@ namespace lecture_10
             Square s = new Square(6);
             MessageBox.Show(s.DisplayArea());
 
-            
+
+        }
+
+        private async void btnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            using OOP2022Context _context = new OOP2022Context();
+            Repository myRepo = new Repository(_context);
+            Students _Student = new Students();
+            _Student.FullName = "Furkan Gözükara";
+            _Student.Gpa = 3.77M;
+
+
+            await myRepo.Create(_Student);
         }
     }
 }
