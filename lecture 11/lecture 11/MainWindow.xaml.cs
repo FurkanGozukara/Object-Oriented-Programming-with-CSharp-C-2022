@@ -81,6 +81,9 @@ namespace lecture_11
         //therefore from this method you cant directly access ui elements
         public void accurateTimerClick(Object stateInfo)
         {
+            if (checkPause())
+                return;
+
             writeRunningThread("threading timer");
             Debug.WriteLine(DateTime.Now.ToString("ss:fff"));
 
@@ -95,8 +98,18 @@ namespace lecture_11
         private static int _counter_wpf = 0, _counter_threading = 0;
 
         //this runs inside main method so any unhandled exception will cause application termination and you can directly access elements in the main thread
+        private static bool checkPause()
+        {
+            if (status is AppStatus.Pause)
+                return true;
+            return false;
+        }
+
         private void MainTimer_Tick(object? sender, EventArgs e)
         {
+            if (checkPause())
+                return;
+
             writeRunningThread("wpf timer");
             Debug.WriteLine(DateTime.Now.ToString("ss:fff"));
 
@@ -187,7 +200,21 @@ namespace lecture_11
         private void btnRun_Click(object sender, RoutedEventArgs e)
         {
             mainTimer.Start();
-            accurateTimer = new Timer(accurateTimerClick, null, 0, 100);
+
+            //accurateTimer?.Dispose();
+
+            //if (accurateTimer is not null)
+            //    accurateTimer.Dispose();
+
+            if (accurateTimer is null)
+                accurateTimer = new Timer(accurateTimerClick, null, 0, 100);
+            else
+                accurateTimer.Change(0, 100);
+        }
+
+        private void btnPauseWithoutModify_Click(object sender, RoutedEventArgs e)
+        {
+            status = (status == AppStatus.Pause) ? AppStatus.Continue : AppStatus.Pause;
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
@@ -197,8 +224,9 @@ namespace lecture_11
                 _counter_wpf = 0;
                 _counter_threading = 0;
             }
+            accurateTimer.Change(Timeout.Infinite, Timeout.Infinite);
             mainTimer.Stop();
-            accurateTimer.Dispose();
+            //accurateTimer.Dispose();
         }
     }
 }

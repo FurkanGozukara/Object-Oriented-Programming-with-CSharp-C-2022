@@ -13,6 +13,7 @@
         <Button x:Name="btnPause" Content="pause v1" HorizontalAlignment="Left" Margin="616,28,0,0" VerticalAlignment="Top" Height="94" Width="105" Click="btnPause_Click"/>
         <Button x:Name="btnStop" Content="stop v1" HorizontalAlignment="Left" Margin="616,156,0,0" VerticalAlignment="Top" Height="94" Width="105" Click="btnPause_Click"/>
         <Label Name="lblThreadingtimer" Content="lblThreadingtimer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="437,75,0,0"/>
+        <Button Name="btnPauseWithoutModify" Content="pause/continue without modifying timer" HorizontalAlignment="Left" Margin="269,156,0,0" VerticalAlignment="Top" Height="73" Width="206" Click="btnPauseWithoutModify_Click"/>
 
     </Grid>
 </Window>
