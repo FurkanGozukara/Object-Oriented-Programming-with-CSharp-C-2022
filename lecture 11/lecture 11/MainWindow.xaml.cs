@@ -228,5 +228,45 @@ namespace lecture_11
             mainTimer.Stop();
             //accurateTimer.Dispose();
         }
+
+        private void btnSortCustomClass_Click(object sender, RoutedEventArgs e)
+        {
+            List<csStudents> studentList = new List<csStudents>
+            {
+                 new csStudents (11,"test"),
+                 new csStudents (2,"ahmet"),
+                 new csStudents (343, "hakan")
+            };
+
+            studentList.Sort(new testCompare<csStudents>());
+        }
+
+        public class testCompare<T> : IComparer<csStudents>
+        { 
+            public int Compare(csStudents x , csStudents y)
+            {
+                return x.studentId.CompareTo(y.studentId);
+            }
+        }
+
+        public class csStudents : IComparer<(int,string)>
+        {
+            public csStudents()
+            {
+
+            }
+            public csStudents(int _studentId, string _studentName)
+            {
+                studentId = _studentId;
+                studentName = _studentName;
+            }
+            public int studentId { get; set; }
+            public string studentName { get; set; }
+
+            public int Compare((int, string) x, (int, string) y)
+            {
+                return x.Item1.CompareTo(y.Item1);
+            }
+        }
     }
 }
