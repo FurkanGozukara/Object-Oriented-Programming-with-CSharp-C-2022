@@ -64,6 +64,8 @@ namespace lecture_11
 
         private static readonly DispatcherTimer mainTimer = new DispatcherTimer();
 
+        private static Timer accurateTimer;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -71,13 +73,45 @@ namespace lecture_11
 
             mainTimer.Tick += MainTimer_Tick;
             mainTimer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+
+
         }
 
-        private static int _counter = 0;
+        //if unhandled exception occurs inside here, it wont cause your application to crash because it is running in a sub thread
+        //therefore from this method you cant directly access ui elements
+        public void accurateTimerClick(Object stateInfo)
+        {
+            writeRunningThread("threading timer");
+            Debug.WriteLine(DateTime.Now.ToString("ss:fff"));
 
+            //  lblThreadingtimer.Content = _counter_threading++.ToString("N0"); this will throw error
+
+            lblThreadingtimer.Dispatcher.BeginInvoke(() =>
+            {
+                lblThreadingtimer.Content = _counter_threading++.ToString("N0");
+            });
+        }
+
+        private static int _counter_wpf = 0, _counter_threading = 0;
+
+        //this runs inside main method so any unhandled exception will cause application termination and you can directly access elements in the main thread
         private void MainTimer_Tick(object? sender, EventArgs e)
         {
-            lblNumber.Content = _counter++.ToString("N0");
+            writeRunningThread("wpf timer");
+            Debug.WriteLine(DateTime.Now.ToString("ss:fff"));
+
+            //lblNumber.Content = _counter_wpf++.ToString("N0");
+
+            lblNumber.Dispatcher.BeginInvoke(() =>
+            {
+                lblNumber.Content = _counter_wpf++.ToString("N0");
+            });
+
+        }
+
+        private void writeRunningThread(string msg = "")
+        {
+            Debug.WriteLine($"running thread: {msg} " + Thread.CurrentThread.ManagedThreadId);
         }
 
         private async void btntimeout_Click(object sender, RoutedEventArgs e)
@@ -87,8 +121,8 @@ namespace lecture_11
                          //   list = null; this wont work because readonly protecting the pointer object
                          //  list = new List<int>();this wont work because readonly protecting the pointer object
 
-            Debug.WriteLine("running thread: " + Thread.CurrentThread.ManagedThreadId);
 
+            writeRunningThread();
             var source = await returnSourceCode("https://www.toros.edu.tr").ConfigureAwait(false);
 
 
@@ -153,15 +187,18 @@ namespace lecture_11
         private void btnRun_Click(object sender, RoutedEventArgs e)
         {
             mainTimer.Start();
+            accurateTimer = new Timer(accurateTimerClick, null, 0, 100);
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
-            if((sender as Button).Name == nameof(btnStop))
+            if ((sender as Button).Name == nameof(btnStop))
             {
-                _counter = 0;
+                _counter_wpf = 0;
+                _counter_threading = 0;
             }
             mainTimer.Stop();
+            accurateTimer.Dispose();
         }
     }
 }

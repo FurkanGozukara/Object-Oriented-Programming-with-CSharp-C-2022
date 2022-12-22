@@ -9,9 +9,10 @@
     <Grid>
         <Button Name="btntimeout" Content="time out test" HorizontalAlignment="Left" Margin="43,28,0,0" VerticalAlignment="Top" Height="94" Width="139" Click="btntimeout_Click"/>
         <Button x:Name="btnRun" Content="run the software v1" HorizontalAlignment="Left" Margin="269,28,0,0" VerticalAlignment="Top" Height="94" Width="108" Click="btnRun_Click"/>
-        <Label Name="lblNumber" Content="Label" HorizontalAlignment="Left" Margin="437,28,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblNumber" Content="dispatcher timer" HorizontalAlignment="Left" Margin="437,28,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnPause" Content="pause v1" HorizontalAlignment="Left" Margin="616,28,0,0" VerticalAlignment="Top" Height="94" Width="105" Click="btnPause_Click"/>
         <Button x:Name="btnStop" Content="stop v1" HorizontalAlignment="Left" Margin="616,156,0,0" VerticalAlignment="Top" Height="94" Width="105" Click="btnPause_Click"/>
+        <Label Name="lblThreadingtimer" Content="lblThreadingtimer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="437,75,0,0"/>
 
     </Grid>
 </Window>
