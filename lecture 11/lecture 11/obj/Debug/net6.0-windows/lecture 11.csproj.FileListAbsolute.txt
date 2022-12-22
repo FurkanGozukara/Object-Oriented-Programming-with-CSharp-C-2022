@@ -1,0 +1,23 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\lecture 11.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\lecture 11.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\lecture 11.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\lecture 11.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\lecture 11.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.g.resources
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.csproj.CopyComplete
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\refint\lecture 11.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\lecture 11.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 11\lecture 11\obj\Debug\net6.0-windows\ref\lecture 11.dll
