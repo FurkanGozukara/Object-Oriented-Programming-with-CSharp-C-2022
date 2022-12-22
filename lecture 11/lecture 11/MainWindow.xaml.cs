@@ -1,9 +1,14 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Printing;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,21 +19,65 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace lecture_11
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        public enum AppStatus
+        {
+            Start,
+            Pause,
+            Continue,
+            Stop
+        };
+
+        public static AppStatus status = AppStatus.Continue;
+
+        private AppStatus _status2;
+
+        public AppStatus status2
+        {
+            get { return _status2; }
+            set
+            {
+                _status2 = value;
+                //simply call what you want done
+                StatusPropertyChanged();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void StatusPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
         static readonly HttpClient client = new HttpClient();
         static readonly List<int> list = new List<int> { 32, 12 };
         static readonly int max = 300;
+
+        private static readonly DispatcherTimer mainTimer = new DispatcherTimer();
+
         public MainWindow()
         {
             InitializeComponent();
-            client.Timeout = new TimeSpan(0, 2, 0);
+            client.Timeout = new TimeSpan(0, 2, 0);//2 min timeout
+
+            mainTimer.Tick += MainTimer_Tick;
+            mainTimer.Interval = new TimeSpan(0, 0, 0, 0, 100);
+        }
+
+        private static int _counter = 0;
+
+        private void MainTimer_Tick(object? sender, EventArgs e)
+        {
+            lblNumber.Content = _counter++.ToString("N0");
         }
 
         private async void btntimeout_Click(object sender, RoutedEventArgs e)
@@ -38,19 +87,52 @@ namespace lecture_11
                          //   list = null; this wont work because readonly protecting the pointer object
                          //  list = new List<int>();this wont work because readonly protecting the pointer object
 
-            var source = await returnSourceCode("https://www.toros.edu.tr");
-            MessageBox.Show(source);
+            Debug.WriteLine("running thread: " + Thread.CurrentThread.ManagedThreadId);
+
+            var source = await returnSourceCode("https://www.toros.edu.tr").ConfigureAwait(false);
+
+
+
+            source = await Task.Factory.StartNew(() =>
+            {
+                return returnSourceCode("https://www.monstermmorpg.com");
+
+            }, fetchToken).Result;
+
+            MessageBox.Show(source?.Substring(0, 100));
         }
+
+        CancellationToken fetchToken = new CancellationToken();
 
         //why message box didnt show anything
         //make this code in a way that it wont freeze the ui
 
+        static async Task<List<string>> batchCrawl(string Url, CancellationToken token = default, int gg = default, string aa = null)
+        {
+            List<string> sourcCodes = new List<string>();
+
+            for (int i = 0; i < 20; i++)
+            {
+                if (status.Equals(AppStatus.Stop))
+                    break;
+
+                var source = await (returnSourceCode("https://www.pokemonpets.com"));
+
+                if (token.IsCancellationRequested) { break; }
+            }
+
+            return sourcCodes;
+        }
+
         static async Task<string> returnSourceCode(string Url)
         {
+            Debug.WriteLine("running thread: " + Thread.CurrentThread.ManagedThreadId);
+
+            await Task.Delay(5555);
             // Call asynchronous network methods in a try/catch block to handle exceptions.
             try
             {
-                using HttpResponseMessage response = await client.GetAsync(Url);              
+                using HttpResponseMessage response = await client.GetAsync(Url);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 // Above three lines can be replaced with new helper method below
@@ -59,11 +141,27 @@ namespace lecture_11
                 return responseBody;
             }
             catch (Exception e)
-            {                
-                Console.WriteLine("\nException Caught!");
-                Console.WriteLine("Message :{0} ", e.Message);
+            {
+                MessageBox.Show("\nException Caught!");
+                MessageBox.Show("Message :{0} ", e.Message);
             }
             return null;
+        }
+
+
+
+        private void btnRun_Click(object sender, RoutedEventArgs e)
+        {
+            mainTimer.Start();
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            if((sender as Button).Name == nameof(btnStop))
+            {
+                _counter = 0;
+            }
+            mainTimer.Stop();
         }
     }
 }
