@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -26,7 +27,7 @@ namespace lecture_12
         public MainWindow()
         {
             InitializeComponent();
-            swWrite.AutoFlush= true;
+            swWrite.AutoFlush = true;
             swWrite2.AutoFlush = true;
             swWrite3.AutoFlush = true;
             swWrite4.AutoFlush = true;
@@ -37,6 +38,16 @@ namespace lecture_12
             dataRaceEx1();
             dataRaceEx2();
             dataRaceEx3();
+        }
+
+        StreamWriter swWrite = new StreamWriter("test.txt");
+        private async Task printToFile(int _param)
+        {
+            Debug.WriteLine(_param.ToString());
+
+            await swWrite.WriteLineAsync(_param.ToString());
+
+
         }
 
         void dataRaceEx1()
@@ -60,7 +71,7 @@ namespace lecture_12
             {
                 var _local = vrItemm;
                 irPassedData = vrItemm;
-                Task.Factory.StartNew( () =>
+                Task.Factory.StartNew(() =>
                 {
                     printToFile2(_local);
                     printToFile4(irPassedData);
@@ -79,34 +90,33 @@ namespace lecture_12
             }
 
             List<Task> listTasks = new List<Task>();
-             
+
+            int _irOrder = 0;
             foreach (var vrItemm in lstNumbers2)
             {
-               var vrTask= Task.Factory.StartNew(() =>
-                {
-                    printToFile3(vrItemm);
-                });
+                var _localOrder = _irOrder;
+                var vrTask = Task.Factory.StartNew(() =>
+                 {
+                     printToFile3(vrItemm, _localOrder);
+                 });
                 listTasks.Add(vrTask);
+                _irOrder++;
             }
 
-            Task.WaitAll(listTasks.ToArray());
+            Task.WaitAll(listTasks.ToArray());//if i dont wait tasks to be finished this list will be empty by the time this line of code is executed since task were not even started at that point
             File.WriteAllLines("test5.txt", listNumbersArrived.Select(pr => pr.ToString()).ToList());
+            File.WriteAllLines("test6.txt", threadSafeList.OrderBy(pr => pr.irOrder).Select(pr => pr.srVal + "\t" + pr.irOrder.ToString()).ToList());
         }
 
-        StreamWriter swWrite = new StreamWriter("test.txt");
-        private async Task printToFile(int _param)
-        {
-            Debug.WriteLine(_param.ToString());
-            await swWrite.WriteLineAsync(_param.ToString());
-        }
+
 
         StreamWriter swWrite2 = new StreamWriter("test2.txt");
-        private  void printToFile2(int _param)
+        private void printToFile2(int _param)
         {
-            lock(swWrite2)
+            lock (swWrite2)
             {
                 swWrite2.WriteLine(_param.ToString());
-            } 
+            }
         }
 
         StreamWriter swWrite4 = new StreamWriter("test4.txt");
@@ -118,11 +128,19 @@ namespace lecture_12
             }
         }
 
+        struct ourSpecialParams
+        {
+            public string srVal;
+            public int irOrder;
+        }
+
         StreamWriter swWrite3 = new StreamWriter("test3.txt");
-        private static List<int> listNumbersArrived = new List<int>();  
-        private void printToFile3(object _param)
+        private static List<int> listNumbersArrived = new List<int>();
+        ConcurrentBag<ourSpecialParams> threadSafeList = new ConcurrentBag<ourSpecialParams>();
+        private void printToFile3(object _param, int _irOrder = 0)
         {
             listNumbersArrived.Add(Convert.ToInt32(_param));
+            threadSafeList.Add(new ourSpecialParams { srVal = "complex item " + _irOrder+" "+DateTime.Now.ToString("mm-fffff"), irOrder = _irOrder });
             //lock (swWrite3)
             //{
             //    swWrite3.WriteLine(_param.ToString());
