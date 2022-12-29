@@ -1,0 +1,21 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\lecture 12.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\lecture 12.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\lecture 12.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\lecture 12.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\lecture 12.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.g.resources
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\refint\lecture 12.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\ref\lecture 12.dll
