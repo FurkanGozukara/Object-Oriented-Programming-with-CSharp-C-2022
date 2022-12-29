@@ -19,3 +19,6 @@ C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.pdb
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.genruntimeconfig.cache
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\ref\lecture 12.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\bin\Debug\net6.0-windows\XAct.Core.PCL.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 12\lecture 12\obj\Debug\net6.0-windows\lecture 12.csproj.CopyComplete

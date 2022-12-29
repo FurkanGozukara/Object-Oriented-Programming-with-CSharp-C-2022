@@ -5,9 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lecture_12"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="682" Width="1341">
     <Grid>
         <Button Name="btnDataRacing" Content="data racing example" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top" Height="44" Width="149" Click="btnDataRacing_Click"/>
+        <Button x:Name="btnHash" Content="hash text" HorizontalAlignment="Left" Margin="211,19,0,0" VerticalAlignment="Top" Height="50" Width="75" Click="btnHash_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="33,89,0,0" TextWrapping="Wrap" Text="TextBox" Name="txtOutput" VerticalAlignment="Top" Width="294" Height="191"/>
+        <TextBox Name="txtInput" HorizontalAlignment="Left" Margin="352,19,0,0"     TextWrapping="Wrap"
+  AcceptsReturn="True"
+  VerticalScrollBarVisibility="Visible" Text="input" VerticalAlignment="Top" Width="354" Height="261"/>
+        <TextBox Name="symetricencryptout" HorizontalAlignment="Left" Margin="33,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="673" Height="109"/>
+        <Button Content="decrypt aes" Name="btnDecryptAes" HorizontalAlignment="Left" Margin="729,19,0,0" VerticalAlignment="Top" Width="155" Click="btnDecryptAes_Click"/>
+        <TextBox x:Name="decyrptAes" HorizontalAlignment="Left" Margin="729,56,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="573" Height="224"/>
+        <Button Content="rsa1" Name="btnRSA1" HorizontalAlignment="Left" Margin="746,301,0,0" VerticalAlignment="Top" Click="btnRSA1_Click"/>
+        <Button Content="symetric example" Name="btnex2" HorizontalAlignment="Left" Margin="751,345,0,0" VerticalAlignment="Top" Click="btnex2_Click" Width="155"/>
 
     </Grid>
 </Window>

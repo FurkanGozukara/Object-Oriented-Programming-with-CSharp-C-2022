@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static lecture_12.customEncryption;
 
 namespace lecture_12
 {
@@ -31,6 +33,7 @@ namespace lecture_12
             swWrite2.AutoFlush = true;
             swWrite3.AutoFlush = true;
             swWrite4.AutoFlush = true;
+
         }
 
         private void btnDataRacing_Click(object sender, RoutedEventArgs e)
@@ -140,11 +143,116 @@ namespace lecture_12
         private void printToFile3(object _param, int _irOrder = 0)
         {
             listNumbersArrived.Add(Convert.ToInt32(_param));
-            threadSafeList.Add(new ourSpecialParams { srVal = "complex item " + _irOrder+" "+DateTime.Now.ToString("mm-fffff"), irOrder = _irOrder });
+            threadSafeList.Add(new ourSpecialParams { srVal = "complex item " + _irOrder + " " + DateTime.Now.ToString("mm-fffff"), irOrder = _irOrder });
             //lock (swWrite3)
             //{
             //    swWrite3.WriteLine(_param.ToString());
             //}
+        }
+
+        private readonly static string myCustomKey1 = "test key example";
+
+        private void btnHash_Click(object sender, RoutedEventArgs e)
+        {
+            txtOutput.Text = txtInput.Text.sha256();
+
+            SymmetricAlgorithm aes = new AesManaged();
+
+            aes.Key = myCustomKey1.toByteArray().to32Bytes();
+
+            string message = txtInput.Text;
+
+            // Call the encryptText method to encrypt the a string and save the result to a file   
+            EncryptText(aes, message, "encryptedData.txt");
+
+            symetricencryptout.Text = File.ReadAllText("encryptedData.txt");
+
+        }
+
+        private void btnDecryptAes_Click(object sender, RoutedEventArgs e)
+        {
+            SymmetricAlgorithm aes = new AesManaged();
+            aes.Key = myCustomKey1.toByteArray().to32Bytes();
+            SymmetricAlgorithm aes2 = new AesManaged();
+            var vrKey = "some other key".toByteArray().to32Bytes();
+            aes2.Key = vrKey;
+
+            //var vrDecryptedData = DecryptData(aes2, "encryptedData.txt");//this causes error
+
+            var vrDecryptedData = DecryptData(aes, "encryptedData.txt");
+            decyrptAes.Text = vrDecryptedData;
+        }
+
+        private void btnRSA1_Click(object sender, RoutedEventArgs e)
+        {
+
+            //Encrypt and export public and private keys
+            var rsa1 = new RSACryptoServiceProvider();
+            rsa1.KeySize = 16384;
+            string privateKey = rsa1.ToXmlString(true);   // server side export
+            string publicKey = rsa1.ToXmlString(false);   // server side export
+            byte[] toEncryptData = Encoding.ASCII.GetBytes(txtInput.Text);
+            byte[] encryptedRSA = rsa1.Encrypt(toEncryptData, false);
+            string EncryptedResult = Encoding.Default.GetString(encryptedRSA);
+
+            //Decrypt using exported keys
+            var rsa2 = new RSACryptoServiceProvider();
+            rsa2.FromXmlString(privateKey);
+            byte[] decryptedRSA = rsa2.Decrypt(encryptedRSA, false);
+            string originalResult = Encoding.Default.GetString(decryptedRSA);
+        }
+
+
+
+        private void btnex2_Click(object sender, RoutedEventArgs e)
+        {
+            var vrMasterKey = "masterkey.txt";
+            if (File.Exists(vrMasterKey) == false)
+            {
+                using (SymmetricAlgorithm symmetricAlgorithm = Aes.Create())
+                {
+                    symmetricAlgorithm.GenerateKey();
+                    byte[] key = symmetricAlgorithm.Key;
+                    File.WriteAllBytes(vrMasterKey, key);
+                }
+            }
+
+
+            using (SymmetricAlgorithm symmetricAlgorithm = Aes.Create())
+            {
+
+                byte[] key = File.ReadAllBytes(vrMasterKey);
+
+
+                // Encrypt some data
+                string plainText = txtInput.Text;
+                byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+                byte[] cipherTextBytes;
+                using (ICryptoTransform encryptor = symmetricAlgorithm.CreateEncryptor(key, symmetricAlgorithm.IV))
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                    }
+                    cipherTextBytes = memoryStream.ToArray();
+                }
+
+                // Decrypt the data
+                string decryptedText;
+                using (ICryptoTransform decryptor = symmetricAlgorithm.CreateDecryptor(key, symmetricAlgorithm.IV))
+                using (MemoryStream memoryStream = new MemoryStream(cipherTextBytes))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader(cryptoStream))
+                        {
+                            decryptedText = streamReader.ReadToEnd();
+                        }
+                    }
+                }
+                decyrptAes.Text= decryptedText; 
+            }
         }
     }
 }

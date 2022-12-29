@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="XAct.Core.PCL" Version="0.0.5014" />
+  </ItemGroup>
+
 </Project>
