@@ -29,6 +29,7 @@ namespace lecture_12
             swWrite.AutoFlush= true;
             swWrite2.AutoFlush = true;
             swWrite3.AutoFlush = true;
+            swWrite4.AutoFlush = true;
         }
 
         private void btnDataRacing_Click(object sender, RoutedEventArgs e)
@@ -54,12 +55,15 @@ namespace lecture_12
         void dataRaceEx2()
         {
             List<int> lstNumbers = Enumerable.Range(1, 100).ToList();
+            int irPassedData = 0;
             foreach (var vrItemm in lstNumbers)
             {
                 var _local = vrItemm;
+                irPassedData = vrItemm;
                 Task.Factory.StartNew( () =>
                 {
                     printToFile2(_local);
+                    printToFile4(irPassedData);
                 });
             }
         }
@@ -75,7 +79,7 @@ namespace lecture_12
             }
 
             List<Task> listTasks = new List<Task>();
-
+             
             foreach (var vrItemm in lstNumbers2)
             {
                var vrTask= Task.Factory.StartNew(() =>
@@ -86,7 +90,7 @@ namespace lecture_12
             }
 
             Task.WaitAll(listTasks.ToArray());
-            File.WriteAllLines("test4.txt", listNumbersArrived.Select(pr => pr.ToString()).ToList());
+            File.WriteAllLines("test5.txt", listNumbersArrived.Select(pr => pr.ToString()).ToList());
         }
 
         StreamWriter swWrite = new StreamWriter("test.txt");
@@ -103,6 +107,15 @@ namespace lecture_12
             {
                 swWrite2.WriteLine(_param.ToString());
             } 
+        }
+
+        StreamWriter swWrite4 = new StreamWriter("test4.txt");
+        private void printToFile4(int _param)
+        {
+            lock (swWrite4)
+            {
+                swWrite4.WriteLine(_param.ToString());
+            }
         }
 
         StreamWriter swWrite3 = new StreamWriter("test3.txt");
