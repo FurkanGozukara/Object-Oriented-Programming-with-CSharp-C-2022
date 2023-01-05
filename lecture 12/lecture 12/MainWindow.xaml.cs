@@ -183,6 +183,7 @@ namespace lecture_12
             decyrptAes.Text = vrDecryptedData;
         }
 
+        //asymetric encryption - maximum size is limited
         private void btnRSA1_Click(object sender, RoutedEventArgs e)
         {
 
@@ -203,7 +204,7 @@ namespace lecture_12
         }
 
 
-
+        //symetric encryption - big size is possible
         private void btnex2_Click(object sender, RoutedEventArgs e)
         {
             var vrMasterKey = "masterkey.txt";
@@ -237,7 +238,7 @@ namespace lecture_12
                     }
                     cipherTextBytes = memoryStream.ToArray();
                 }
-
+                File.WriteAllBytes("cihperedText.txt", cipherTextBytes);
                 // Decrypt the data
                 string decryptedText;
                 using (ICryptoTransform decryptor = symmetricAlgorithm.CreateDecryptor(key, symmetricAlgorithm.IV))

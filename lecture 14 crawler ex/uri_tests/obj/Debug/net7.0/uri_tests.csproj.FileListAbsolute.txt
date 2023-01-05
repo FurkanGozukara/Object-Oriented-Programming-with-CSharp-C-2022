@@ -1,0 +1,15 @@
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\bin\Debug\net7.0\uri_tests.exe
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\bin\Debug\net7.0\uri_tests.deps.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\bin\Debug\net7.0\uri_tests.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\bin\Debug\net7.0\uri_tests.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\bin\Debug\net7.0\uri_tests.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\refint\uri_tests.dll
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.pdb
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\uri_tests.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\uri_tests\obj\Debug\net7.0\ref\uri_tests.dll
