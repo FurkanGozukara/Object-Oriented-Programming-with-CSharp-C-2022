@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
 using System.Security.Policy;
 using System.Text;
@@ -18,13 +20,22 @@ namespace lecture_14_crawler_ex
     public static class Scripts
     {
 
+        private static StreamWriter swLogger = new StreamWriter("errors.txt");
+
+        static Scripts()
+        {
+            swLogger.AutoFlush= true;
+        }
+
+        
+
         private static readonly HttpClient client = new HttpClient();
         public static async Task<string> returnSourceCode(string Url, string UrlHash)
         {
-            using ExampleCrawlerContext _ExampleCrawlerContext = new ExampleCrawlerContext();
-            var _url =await _ExampleCrawlerContext.Urls.FindAsync(UrlHash);
+
             // Call asynchronous network methods in a try/catch block to handle exceptions.
-            _url.Crawled = true;
+            bool crawled = true;
+            Byte iraddCrawlCount = 0;
             string response_result = null;
             try
             {
@@ -38,10 +49,20 @@ namespace lecture_14_crawler_ex
             }
             catch (Exception e)
             {
+                lock(swLogger)
+                {
+                    swLogger.WriteLine(e.Message);
+                }
 
-                _url.CrawlTryCount++;
-                _url.Crawled = false;
+                iraddCrawlCount++;
+                 crawled = false;
             }
+
+
+            using ExampleCrawlerContext _ExampleCrawlerContext = new ExampleCrawlerContext();
+            var _url = await _ExampleCrawlerContext.Urls.FindAsync(UrlHash);
+            _url.Crawled = crawled;
+            _url.CrawlTryCount += iraddCrawlCount;
             await _ExampleCrawlerContext.SaveChangesAsync();
 
             lock (MainWindow.hsActiveCrawling)

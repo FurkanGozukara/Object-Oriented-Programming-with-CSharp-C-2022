@@ -3,6 +3,7 @@ using lecture_14_crawler_ex.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.SymbolStore;
 using System.Globalization;
 using System.Linq;
@@ -71,36 +72,40 @@ namespace lecture_14_crawler_ex
 
 
         private static readonly ReaderWriterLockSlim _lockRootAdd = new ReaderWriterLockSlim();
+        private static readonly SemaphoreSlim semph_returnRootDomainId = new SemaphoreSlim(1, 1);
 
         private static async Task<int> returnRootDomainId(this string srUrl)
         {
-
-            _lockRootAdd.EnterWriteLock();
+            //_lockRootAdd.EnterWriteLock();
+            semph_returnRootDomainId.Wait();
+            Debug.WriteLine("returnRootDomainId entered");
             try
             {
-
                 using ExampleCrawlerContext _context = new ExampleCrawlerContext();
                 string rootDomain = srUrl.NormalizeUrl().returnRootDomainUrl();
                 var rootDomainHash = rootDomain.SHA256Hash();
 
-                var result = await _context.RootDomains.Where(pr => pr.RootDomainUrlHash == rootDomainHash).FirstOrDefaultAsync();
+                var result = await _context.RootDomains.Where(pr => pr.RootDomainUrlHash == rootDomainHash).FirstOrDefaultAsync().ConfigureAwait(false);
                 if (result == null)
                 {
                     RootDomains _RootDomain = new RootDomains();
                     _RootDomain.RootDomainUrlHash = rootDomainHash;
 
                     _context.Add(_RootDomain);
-                    await _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync().ConfigureAwait(false);
 
-                    await addUrl(rootDomain);
+                    Task.Run(() => { addUrl(rootDomain); }); 
                 }
 
-                var result2 = await _context.RootDomains.Where(pr => pr.RootDomainUrlHash == rootDomainHash).FirstOrDefaultAsync();
+                var result2 = await _context.RootDomains.Where(pr => pr.RootDomainUrlHash == rootDomainHash).FirstOrDefaultAsync().ConfigureAwait(false);
+                _context.Dispose();
                 return result2.RootDomainId;
             }
             finally
             {
-                _lockRootAdd.ExitWriteLock();
+                semph_returnRootDomainId.Release();
+                //_lockRootAdd.ExitWriteLock();
+                Debug.WriteLine("returnRootDomainId released");
             }
         }
 
@@ -108,10 +113,21 @@ namespace lecture_14_crawler_ex
 
         private static readonly ReaderWriterLockSlim addUrlLock = new ReaderWriterLockSlim(LockRecursionPolicy.SupportsRecursion);
 
+        private static long addUrlCounter = 0;
+        private static long addUrlCounter_called_To_Enter = 0;
+
+        private static readonly SemaphoreSlim semph_addUrl = new SemaphoreSlim(1, 1);
+
         public static async Task<bool> addUrl(this string srUrl)
         {
-            addUrlLock.EnterWriteLock();
+            //addUrlLock.EnterWriteLock();
 
+            Interlocked.Increment(ref addUrlCounter_called_To_Enter);
+            Debug.WriteLine("called to enter " + Interlocked.Read(ref addUrlCounter_called_To_Enter));
+            semph_addUrl.Wait();
+            Interlocked.Increment(ref addUrlCounter);
+            Debug.WriteLine("addUrl entered "+ Interlocked.Read(ref addUrlCounter));
+          
             try
             {
                 using ExampleCrawlerContext _context = new ExampleCrawlerContext();
@@ -120,26 +136,32 @@ namespace lecture_14_crawler_ex
                 Urls myUrl = new Urls();
                 myUrl.UrlHash = finalUrl.SHA256Hash();
 
-                var result = await _context.Urls.FindAsync(myUrl.UrlHash);
+                var result = await _context.Urls.FindAsync(myUrl.UrlHash).ConfigureAwait(false);
                 if (result != null)
                 {
+                    _context.Dispose();
                     return false;
                 }
 
                 myUrl.Url = srUrl;
                 myUrl.ParentUrlHash = myUrl.UrlHash;
 
-                myUrl.RootDomainId = await myUrl.Url.returnRootDomainId();
+                myUrl.RootDomainId = await myUrl.Url.returnRootDomainId().ConfigureAwait(false);
 
                 _context.Add(myUrl);
-             await   _context.SaveChangesAsync();
+                await _context.SaveChangesAsync().ConfigureAwait(false);
+                _context.Dispose();
                 return true;
             }
             finally
             {
-                addUrlLock.ExitWriteLock();
+                //if (addUrlLock.IsWriteLockHeld)
+                //    addUrlLock.ExitWriteLock();
 
-
+                semph_addUrl.Release();
+                Interlocked.Decrement(ref addUrlCounter);
+                Debug.WriteLine("addUrl released " + Interlocked.Read(ref addUrlCounter));
+                Interlocked.Decrement(ref addUrlCounter_called_To_Enter);
             }
         }
     }

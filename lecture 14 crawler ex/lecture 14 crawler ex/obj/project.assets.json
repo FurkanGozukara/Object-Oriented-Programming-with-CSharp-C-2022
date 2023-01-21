@@ -1859,12 +1859,11 @@
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "sha512": "PTDwF1ZDt97kGuCX3lm2DRU17d58k0DX1Vu9Y4HssLaMzIr+Kp485RHhTUcpFu0hFHF0BTOegpg/IGFZ/97NSA==",
       "type": "package",
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -2109,7 +2108,7 @@
       ]
     },
     "System.Globalization/4.3.0": {
-      "sha512": "kYdVd2f2PAdFGblzFswE4hkNANJBKRmsfa2X5LG2AcWE1c7/4t0pYae1L8vfZ5xvE2nK/R9JprtToA61OSHWIg==",
+      "sha512": "yaaeftSB6i8hTvWz1w+izBL6zkql3DW7KXdjTAEeqrHzuK2+M59mQSlw6sS8l+QvutXOGMM2gFrUQms0o/Ua5g==",
       "type": "package",
       "path": "system.globalization/4.3.0",
       "files": [
@@ -2197,7 +2196,7 @@
       ]
     },
     "System.IO/4.3.0": {
-      "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "sha512": "LsGdC5uH2LozdQJTrwpCtM+5vy5/34IhHxbgXtQYURjNxqHIcAsSPd8Icj8moMSFSQWNaGcSc5Y150YLJATAdQ==",
       "type": "package",
       "path": "system.io/4.3.0",
       "files": [
@@ -2365,7 +2364,7 @@
       ]
     },
     "System.Reflection/4.3.0": {
-      "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "sha512": "e5Zlp7vS2TGiol6MTiWEx0vyXN7kOEWrS83SJDfN3B7fqzi74cfPynuNOcLjWj3b/QsMazRNS+7YZmoN+oAefQ==",
       "type": "package",
       "path": "system.reflection/4.3.0",
       "files": [
@@ -2445,7 +2444,7 @@
       ]
     },
     "System.Reflection.Primitives/4.3.0": {
-      "sha512": "5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "sha512": "3W7WfH802MkRqpxS1DKT8m3HpT1cd5JydUTf2Hhc2WtxwikgdMNWTZigZ2vPrZFbnpfYwhlaWjfeDbQ1cHkZNA==",
       "type": "package",
       "path": "system.reflection.primitives/4.3.0",
       "files": [
@@ -2501,7 +2500,7 @@
       ]
     },
     "System.Resources.ResourceManager/4.3.0": {
-      "sha512": "/zrcPkkWdZmI4F92gL/TPumP98AVDu/Wxr3CSJGQQ+XN6wbRZcyfSKVoPo17ilb3iOr0cCRqJInGwNMolqhS8A==",
+      "sha512": "HuvH1IR17X/LrTBm1jmVhaHH+LWbVG4CDhgPbjo8UHJ9OJ1x0wkgCwmIThToiJHVq08biwGRIwiSM6qsuxqSRA==",
       "type": "package",
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
@@ -2557,7 +2556,7 @@
       ]
     },
     "System.Runtime/4.3.0": {
-      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "sha512": "YJ1TyvBfvkwYJ1BMZHGiIdCgqVg1zWPQz9bBPQqSaM+0FrHXLzJ/TPs3/6kfvw5j5ttIgUaeZlOOM2Zo5jDksg==",
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
@@ -2946,7 +2945,7 @@
       ]
     },
     "System.Text.Encoding/4.3.0": {
-      "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "sha512": "C2sZ/2yE2TAjB9oEndjfLKjatkylAXwgqUg3qSyEl/bIg+7RWMqJpPoLs2sdRYH/sFIvOVHeIwok5w7KvaWYtA==",
       "type": "package",
       "path": "system.text.encoding/4.3.0",
       "files": [
@@ -3100,7 +3099,7 @@
       ]
     },
     "System.Threading.Tasks/4.3.0": {
-      "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "sha512": "yImCbhPZQrwDcEKCAICZeNridK1gfkXgUIv/r97VJ9pyQlnQO7o0crucYMRIIXDSBIQCv9GcrdQlihwzTw6JuA==",
       "type": "package",
       "path": "system.threading.tasks/4.3.0",
       "files": [
@@ -3234,31 +3233,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\": {},
+    "C:\\Users\\King\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 14 crawler ex\\lecture 14 crawler ex\\lecture 14 crawler ex.csproj",
+      "projectUniqueName": "C:\\Users\\King\\Downloads\\test2\\Object-Oriented-Programming-with-CSharp-C-2022\\lecture 14 crawler ex\\lecture 14 crawler ex\\lecture 14 crawler ex.csproj",
       "projectName": "lecture 14 crawler ex",
-      "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 14 crawler ex\\lecture 14 crawler ex\\lecture 14 crawler ex.csproj",
-      "packagesPath": "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Furkan Gözükara\\Desktop\\oop 2022-2023\\lecture 14 crawler ex\\lecture 14 crawler ex\\obj\\",
+      "projectPath": "C:\\Users\\King\\Downloads\\test2\\Object-Oriented-Programming-with-CSharp-C-2022\\lecture 14 crawler ex\\lecture 14 crawler ex\\lecture 14 crawler ex.csproj",
+      "packagesPath": "C:\\Users\\King\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\King\\Downloads\\test2\\Object-Oriented-Programming-with-CSharp-C-2022\\lecture 14 crawler ex\\lecture 14 crawler ex\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Furkan Gözükara\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
+        "C:\\Users\\King\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },

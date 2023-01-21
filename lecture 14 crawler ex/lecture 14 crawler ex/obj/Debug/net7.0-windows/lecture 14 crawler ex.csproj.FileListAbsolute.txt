@@ -57,3 +57,62 @@ C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\lecture 1
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.genruntimeconfig.cache
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\ref\lecture 14 crawler ex.dll
 C:\Users\Furkan Gözükara\Desktop\oop 2022-2023\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\HtmlAgilityPack.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\lecture 14 crawler ex.exe
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\lecture 14 crawler ex.deps.json
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\lecture 14 crawler ex.runtimeconfig.json
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\lecture 14 crawler ex.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\lecture 14 crawler ex.pdb
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Azure.Core.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Azure.Identity.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\HtmlAgilityPack.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Identity.Client.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\System.Memory.Data.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\System.Runtime.Caching.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\bin\Debug\net7.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.csproj.AssemblyReference.cache
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex_MarkupCompile.cache
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex_MarkupCompile.lref
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.g.resources
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.AssemblyInfoInputs.cache
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.AssemblyInfo.cs
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.csproj.CoreCompileInputs.cache
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.csproj.CopyComplete
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\refint\lecture 14 crawler ex.dll
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.pdb
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\lecture 14 crawler ex.genruntimeconfig.cache
+C:\Users\King\Downloads\test2\Object-Oriented-Programming-with-CSharp-C-2022\lecture 14 crawler ex\lecture 14 crawler ex\obj\Debug\net7.0-windows\ref\lecture 14 crawler ex.dll
